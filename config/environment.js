@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'quick-ember-octane-init',
+    modulePrefix: 'mu-semtech',
     environment,
     rootURL: '/',
     locationType: 'auto',

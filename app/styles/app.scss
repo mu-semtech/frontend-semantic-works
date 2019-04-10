@@ -1,0 +1,450 @@
+$color-blue: #44bdff;
+$color-yellow: #fff963;
+$color-orange: #ff5300;
+$dirty-background-color: #fafafa;
+$standard-box-shadow: 0 2px 4px rgb(100,100,100);
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* collapsed panel */
+
+.hero-banner-top {
+  &, & .main-hero {
+    &, & h1 {
+      &, & * {
+        transition: all 2s ease-in-out;
+      }
+    }
+  }
+}
+
+.route__documentation {
+  .hero-banner-top {
+    .main-hero {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      max-width: 2000px;
+      height: 5em !important;
+
+      .background {
+        margin-top: -30em;
+      }
+
+      & > h1 {
+        margin-top: 0.20em;
+        & > span:nth-child(2) {
+          font-size: 0.75em;
+          /* color: $color-yellow; */
+        }
+      }
+
+      .tagline {
+        margin-left: 100em;
+      }
+    }
+  }
+
+  .after-header {
+    position: absolute;
+    top: 5em;
+    max-width: 2000px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: $dirty-background-color;
+    box-shadow: $standard-box-shadow;
+  }
+}
+
+.route__documentation[scrollpositiony="0"] {
+  .hero-banner-top .main-hero {
+    box-shadow: none;
+  }
+}
+.route__documentation {
+  .hero-banner-top .main-hero {
+    box-shadow: $standard-box-shadow;
+    transition: box-shadow 0.2s ease-out;
+  }
+}
+
+.after-header {
+  position: absolute;
+  background-color: $color-orange;
+  transition: all 2s ease-in-out;
+  top: 35em;
+
+  z-index: 0;
+
+  max-width: 1280px;
+  width: 100%;
+  left: 0; right: 0; margin: 3em auto;
+  padding: 0;
+
+  box-shadow: $standard-box-shadow;
+  min-height: 2em;
+}
+
+/* standard body elements */
+body {
+  /* background-color: $color-yellow; // fff963ff */
+  margin: 0;
+  padding: 0;
+
+  background-color: $dirty-background-color;
+}
+
+.hero-banner-top {
+  margin-top: 0;
+  padding: 0;
+
+  & > * {
+    margin-top: 0;
+    max-width: 1280px;
+    width: 100%;
+    left: 0; right: 0; margin: auto;
+    padding: 0;
+    margin-top: 0; margin-bottom: 0;
+  }
+
+  .main-hero {
+    height: 35em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: $standard-box-shadow;
+
+    z-index: 100;
+
+    .background {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      overflow: hidden;
+      min-width: 800px;
+      height: 35em;
+      margin-top: 0;
+      background-image: radial-gradient(farthest-side at 8em 4em, $color-yellow 0%, $color-orange 100%);
+    }
+
+    h1, .tagline {
+      color: $color-blue;
+      font-family: 'Marck Script', cursive;
+    }
+
+    h1 {
+      position: absolute;
+      display: flex;
+      font-size: 4.5em;
+      top: 0em;
+      left: 0; right: 0;
+      margin-top: 1em;
+
+      & > span:nth-child(1){
+        flex-grow: 20;
+      }
+      & > span:nth-child(2){
+        flex-grow: 0;
+      }
+      & > span:nth-child(3){
+        flex-grow: 80;
+      }
+    }
+
+    .tagline {
+      font-size: 3em;
+      top: 5em;
+      position: absolute;
+      width: 100%;
+
+      & > span {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-shadow: 0px 0px 1px $color-blue;
+        opacity: 0;
+
+	      animation: blurFadeInOut 3s ease-in backwards;
+      }
+
+      & > span:nth-child(11){
+	      animation: blurFadeIn 3s ease-in backwards;
+        animation-fill-mode: forwards;
+      }
+
+      @for $i from 0 through 10 {
+        & > span:nth-child(#{$i + 1}) {
+	        animation-delay: $i * 3s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blurFadeInOut {
+	0% {
+		opacity: 0;
+    color: $color-orange;
+		text-shadow: 0px 0px 10px $color-orange;
+		transform: scale(0);
+	}
+	40%, 80% {
+		opacity: 1;
+    color: $color-blue;
+		text-shadow: 0px 0px 0px $color-blue;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+    color: $color-yellow;
+		text-shadow: 0px 0px 20px $color-yellow;
+		transform: scale(2);
+	}
+}
+
+@keyframes blurFadeIn {
+	0% {
+		opacity: 0;
+    color: $color-orange;
+		text-shadow: 0px 0px 10px $color-orange;
+		transform: scale(0);
+	}
+	40%, 100% {
+		opacity: 1;
+    color: $color-blue;
+		text-shadow: 0px 0px 0.1px $color-blue;
+		transform: scale(1);
+	}
+}
+
+
+// Standard formatting
+body {
+  font-family: 'Jura', sans-serif;
+
+  p {
+    font-size: 1.2em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  h1 a {
+    text-decoration: none;
+  }
+}
+
+.documentation-container {
+  margin-top: 2em;
+
+  h1.page-title {
+    font-weight: 900;
+  }
+
+  font-family: 'Vollkorn', sans-serif;
+  font-weight: 400;
+  color: #444;
+
+  @for $i from 1 through 7 {
+    h#{$i} {
+      color: $color-blue;
+      font-weight: bolder;
+      margin-left: -10px;
+      padding-left: 10px;
+      position: relative;
+      left: -4px;
+    }
+
+  }
+
+  h1 {
+    font-size: 3em;
+    color: #333;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2em;
+    color: #333;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 2em;
+    color: #333;
+    /* text-decoration: underline; */
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 1.8em;
+    color: #444;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: 1.5em;
+    color: #444;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 1.5em;
+    color: #444;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
+  ul {
+    list-style-type: "-";
+
+    li {
+      margin-left: -1.75em;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  // heading counters
+  h1 {counter-reset: h2}
+  h2 {counter-reset: h3}
+  h3 {counter-reset: h4}
+  h4 {counter-reset: h5}
+  h5 {counter-reset: h6}
+
+  h2:before {counter-increment: h2; content: counter(h2) ". "}
+  h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+  h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+  h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+  h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
+
+  h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
+
+  @for $i from 0 through 6 {
+    h#{$i}::before {
+      display: inline-block;
+      width: 3em;
+      text-align: right;
+      marging-right: -3em;
+      margin-left: -3em;
+      color: #bbb;
+      font-style: initial;
+      position: relative;
+      right: 0.4ex;
+    }
+  }
+}
+
+// readable-width
+
+.__readable-width {
+  display: flex;
+  max-width: 60em;
+  margin: 0 auto;
+
+  & > .start-spacer { flex-grow: 20; }
+  & > .content { max-width: 60em; width: 100%; padding: 0 1em 0 4em; flex-grow: 0; }
+  & > .end-spacer { flex-grow: 80; }
+}
+
+// Standard formatting on index page
+.route__index {
+  .after-header {
+    display: flex;
+    margin-bottom: 2em;
+
+    & > .content {
+      max-width: 40em;
+      flex-grow: 0;
+    }
+    & > .spacer-before { flex-grow: 20; }
+    & > .spacer-after { flex-grow: 80; }
+
+    & > .content {
+      h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: white;
+        font-family: 'Marck Script', cursive;
+      }
+
+      h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: white;
+        font-family: 'Marck Script', cursive;
+      }
+
+      p {
+        font-family: 'Jura', sans-serif;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+// documentation menu
+.menu {
+  position: absolute;
+  background-color: $color-orange;
+  width: 15em;
+  min-height: 10em;
+  top: 0;
+
+  .submenu {
+    padding-left: 1em;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  a {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 1ex 0;
+    padding: 0 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    color: white;
+
+    &:hover {
+      font-weight: 800;
+      padding-right: 0.4em;
+    }
+
+    &.active {
+      font-weight: 800;
+      padding-right: 0.4em;
+    }
+  }
+}
+
+.route__documentation_core {
+  .submenu.menu__core-microservices {
+    max-height: 300px;
+  }
+}
+
+.route__documentation_templates {
+  .submenu.menu__templates {
+    max-height: 300px;
+  }
+}
+
+.footer {
+  min-height: 5em;
+}
