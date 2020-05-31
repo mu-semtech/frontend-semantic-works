@@ -2,18 +2,18 @@
   <LinkTo @route="documentation.under-construction" @model="general-ideas">general ideas</LinkTo>
   <LinkTo @route="documentation.templates">microservice templates</LinkTo>
   <div class="submenu menu__templates">
-    {{#link-to "documentation.templates.from-repository" "mu-javascript-template"}}mu-javascript-template{{/link-to}}
-    {{#link-to "documentation.templates.from-repository" "mu-ruby-template"}}mu-ruby-template{{/link-to}}
-    {{#link-to "documentation.templates.from-repository" "mu-python-template"}}mu-python-template{{/link-to}}
+    <LinkTo @route="documentation.templates.from-repository" @model="mu-javascript-template">mu-javascript-template</LinkTo>
+    <LinkTo @route="documentation.templates.from-repository" @model="mu-ruby-template">mu-ruby-template</LinkTo>
+    <LinkTo @route="documentation.templates.from-repository" @model="mu-python-template">mu-python-template</LinkTo>
     <LinkTo @route="documentation.templates.roll-your-own">roll your own</LinkTo>
   </div>
 
   <LinkTo @route="documentation.core">core microservices</LinkTo>
   <div class="submenu menu__core-microservices">
-    {{#link-to "documentation.core.from-repository" "mu-identifier"}}mu-identifier{{/link-to}}
-    {{#link-to "documentation.core.from-repository" "mu-dispatcher"}}mu-dispatcher{{/link-to}}
-    {{#link-to "documentation.core.from-repository" "mu-cl-resources"}}mu-cl-resources{{/link-to}}
-    {{#link-to "documentation.core.from-repository" "mu-authorization"}}mu-authorization{{/link-to}}
+    <LinkTo @route="documentation.core.from-repository" @model="mu-identifier">mu-identifier</LinkTo>
+    <LinkTo @route="documentation.core.from-repository" @model="mu-dispatcher">mu-dispatcher</LinkTo>
+    <LinkTo @route="documentation.core.from-repository" @model="mu-cl-resources">mu-cl-resources</LinkTo>
+    <LinkTo @route="documentation.core.from-repository" @model="mu-authorization">mu-authorization</LinkTo>
   </div>
   <LinkTo @route="documentation.under-construction" @model="debugging-howto">debugging howtos</LinkTo>
   <LinkTo @route="documentation.under-construction" @model="semantic-models">semantic models</LinkTo>
