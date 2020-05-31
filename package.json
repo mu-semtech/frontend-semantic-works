@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "ember-cli-sass": "^10.0.0",
+    "ember-cli-update": "^0.54.6",
     "ember-router-scroll": "^1.1.0"
   }
 }
