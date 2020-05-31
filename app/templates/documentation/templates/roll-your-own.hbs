@@ -1,5 +1,5 @@
 <div class="documentation-container">
-  {{#readable-width}}
+  <ReadableWidth>
     <h1>So you want to build a template?</h1>
     <p class="subtitle">An explanation and motivation for templates, from a producer's point of view</p>
 
@@ -222,5 +222,5 @@
       <li>This construction makes it predictable how extensions of this template should behave.  If someone builds a template on top of your template (inception-style), then it's easily understandable what needs to be called.</li>
       <li>It may be that development mode can not be enabled using an environment variable as it requires too many extra dependencies.  This is strongly advised, but it is an option.  In that case, the development image should be maintained in the same repository as the template repository.  The name of the development should be semtech/&lt;template-name&gt;-dev</li>
     </ol>
-  {{/readable-width}}
+  </ReadableWidth>
 </div>

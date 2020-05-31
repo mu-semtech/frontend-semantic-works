@@ -1,9 +1,9 @@
 <div class="documentation-container">
-  {{#readable-width}}
-    <p>This is the README of {{model.repository}}.  Find the source on <a href={{concat "https://github.com/mu-semtech/" model.repository "/blob/master/README.md"}}>GitHub</a>.  Pull Requests are always welcome! </p>
+  <ReadableWidth>
+    <p>This is the README of {{@model.repository}}.  Find the source on <a href={{concat "https://github.com/mu-semtech/" @model.repository "/blob/master/README.md"}}>GitHub</a>.  Pull Requests are always welcome! </p>
 
     <div class="markdown">
-      {{markdown-to-html markdown=model.markdown}}
+      <MarkdownToHtml @markdown={{@model.markdown}} />
     </div>
-  {{/readable-width}}
+  </ReadableWidth>
 </div>

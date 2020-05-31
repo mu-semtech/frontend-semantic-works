@@ -1,11 +1,10 @@
-import EmberRouter from "@ember/routing/router";
 import config from "./config/environment";
-import RouterScroll from 'ember-router-scroll';
+import EmberRouterScroll from 'ember-router-scroll';
 
-const Router = EmberRouter.extend( RouterScroll, {
-  location: config.locationType,
-  rootURL: config.rootURL
-});
+export default class Router extends EmberRouterScroll {
+  location = config.locationType;
+  rootURL = config.rootURL;
+}
 
 Router.map(function() {
   this.route('documentation', function() {
@@ -19,5 +18,3 @@ Router.map(function() {
     this.route('under-construction', { path: ":key" });
   });
 });
-
-export default Router;

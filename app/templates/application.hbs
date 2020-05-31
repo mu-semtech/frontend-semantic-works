@@ -1,10 +1,10 @@
-{{#with-route-css-classes}}
+<WithRouteCssClasses>
   <div class="hero-banner-top">
     <div class="main-hero">
       <div class="background"></div>
       <h1>
         <span></span>
-        <span>{{link-to "mu.semte.ch" "index"}}</span>
+        <span><LinkTo @route="index">mu.semte.ch</LinkTo></span>
         <span></span>
       </h1>
       <p class="tagline">
@@ -24,11 +24,11 @@
   </div>
 
   <div class="after-header">
-    {{#animated-container}}
+    <AnimatedContainer>
       {{outlet}}
-    {{/animated-container}}
+    </AnimatedContainer>
   </div>
 
   <div class="footer">
   </div>
-{{/with-route-css-classes}}
+</WithRouteCssClasses>

@@ -1,23 +1,23 @@
 <div class="menu">
-  {{link-to "general ideas" "documentation.under-construction" "general-ideas"}}
-  {{link-to "microservice templates" "documentation.templates"}}
+  <LinkTo @route="documentation.under-construction" @model="general-ideas">general ideas</LinkTo>
+  <LinkTo @route="documentation.templates">microservice templates</LinkTo>
   <div class="submenu menu__templates">
-    {{link-to "mu-javascript-template" "documentation.templates.from-repository" "mu-javascript-template"}}
-    {{link-to "mu-ruby-template" "documentation.templates.from-repository" "mu-ruby-template"}}
-    {{link-to "mu-python-template" "documentation.templates.from-repository" "mu-python-template"}}
-    {{link-to "roll your own" "documentation.templates.roll-your-own"}}
+    {{#link-to "documentation.templates.from-repository" "mu-javascript-template"}}mu-javascript-template{{/link-to}}
+    {{#link-to "documentation.templates.from-repository" "mu-ruby-template"}}mu-ruby-template{{/link-to}}
+    {{#link-to "documentation.templates.from-repository" "mu-python-template"}}mu-python-template{{/link-to}}
+    <LinkTo @route="documentation.templates.roll-your-own">roll your own</LinkTo>
   </div>
 
-  {{link-to "core microservices" "documentation.core"}}
+  <LinkTo @route="documentation.core">core microservices</LinkTo>
   <div class="submenu menu__core-microservices">
-    {{link-to "mu-identifier" "documentation.core.from-repository" "mu-identifier"}}
-    {{link-to "mu-dispatcher" "documentation.core.from-repository" "mu-dispatcher"}}
-    {{link-to "mu-cl-resources" "documentation.core.from-repository" "mu-cl-resources"}}
-    {{link-to "mu-authorization" "documentation.core.from-repository" "mu-authorization"}}
+    {{#link-to "documentation.core.from-repository" "mu-identifier"}}mu-identifier{{/link-to}}
+    {{#link-to "documentation.core.from-repository" "mu-dispatcher"}}mu-dispatcher{{/link-to}}
+    {{#link-to "documentation.core.from-repository" "mu-cl-resources"}}mu-cl-resources{{/link-to}}
+    {{#link-to "documentation.core.from-repository" "mu-authorization"}}mu-authorization{{/link-to}}
   </div>
-  {{link-to "debugging howtos" "documentation.under-construction" "debugging-howto"}}
-  {{link-to "semantic models" "documentation.under-construction" "semantic-models"}}
-  {{link-to "cookbooks" "documentation.under-construction" "cookbooks"}}
+  <LinkTo @route="documentation.under-construction" @model="debugging-howto">debugging howtos</LinkTo>
+  <LinkTo @route="documentation.under-construction" @model="semantic-models">semantic models</LinkTo>
+  <LinkTo @route="documentation.under-construction" @model="cookbooks">cookbooks</LinkTo>
 </div>
 
 <div class="documentation-body">
