@@ -1,0 +1,265 @@
+
+.sw-header .header{
+  padding: 20px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+  .sw-header .header .search{
+      display: inline-flex;
+      float: left;
+  }
+      .sw-header .header .search .img{
+          height: 40px;
+          display: inline-flex;
+          margin-right: 20px;
+          margin-left: 30px;
+          margin-top: 5px;
+
+      }
+      .sw-header .header .search .text{
+          color: #aaaaaa;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 100;
+          font-style: normal;
+
+          display: inline-flex;
+          margin-top: 15px;
+      }
+  .sw-header .header .logo{
+      display: inline-flex;
+      float: center;
+  }
+      .sw-header .header .logo .img{
+          height: 60px;
+          margin-right: 10px;
+          margin-left: 10px;
+          display: inline-flex;
+
+      }
+      .sw-header .header .logo .text{
+          color: #ffffff;
+          font-family: "Roboto";
+          font-size: 30px;
+          font-weight: 900;
+          font-style: normal;
+
+          display: inline-flex;
+          margin-top: 10px;
+      }
+  .sw-header .header .menu{
+      display: inline-flex;
+      float: right;
+  }
+      .sw-header .header .menu .item{
+          color: #ffffff;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 100;
+          font-style: normal;
+
+          margin-top: 15px;
+          margin-right: 30px;
+          display: inline-flex;
+      }
+.sw-header .slant{
+}
+  .sw-header .slant .img{
+      width: 100%;
+  }
+
+
+.sw-container{
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+.sw-segment{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: #000000 solid 1px;
+}
+.sw-catchy{
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: 100;
+  font-style: normal;
+
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sw-btn-big-rounded-w{
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+  padding: 15px;
+  margin: 20px;
+
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.sw-btn-big-rounded-b{
+
+  border: 1px solid #000000;
+  border-radius: 5px;
+
+  background-color: #000000;
+
+  padding: 15px;
+  margin: 20px;
+
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.sw-info{
+  color: #000000;
+
+  padding: 15px;
+
+}
+
+.sw-info .header{
+  font-family: "Roboto";
+  font-size: 21px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.sw-info .body{
+  line-height: 180%;
+
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+.sw-btn-small-w{
+  border: 1px solid #000000;
+
+  padding: 15px 50px;
+  margin: 20px;
+
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
+}
+.sw-btn-small-b{
+  border: 1px solid #000000;
+
+  padding: 15px 50px;
+  margin: 20px;
+  background-color: #000000;
+
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
+
+}
+.sw-btn-small-r{
+  padding: 15px 50px;
+  margin: 20px;
+  background-color: #f44336;
+
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+.sw-img-fill{
+  width: 100%;
+}
+
+.sw-file-path{
+  margin-bottom: 30px;
+
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.sw-terminal{
+  text-align: left;
+  float: center;
+  color: #f44336;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+}
+  .sw-terminal .contents{
+  }
+      .sw-terminal .contents .cash{
+          color: #000000;
+          font-weight: 700;
+      }
+
+.sw-footer{
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 40px;
+
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.sw-docs-menu{
+
+  padding: 20px;
+
+  line-height: 180%;
+
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+}
+.sw-docs-contents{
+  border-left: #000000 solid 1px;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+.sw-tutorial-img{
+  width: 100%;
+}
+
+.sw-tutorial-btn{
+  width: 100%;
+  padding: 15px;
+  margin: 20px;
+  background-color: #f44336;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 10px;
+  font-style: normal;
+}
