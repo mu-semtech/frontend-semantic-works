@@ -5,11 +5,13 @@
       <img src="./assets/images/search.png" class="img" alt="Search icon" />
       <div class="text">Search the docs...</div>
     </div>
-    <div class="logo">
-      <div class="text">SEMANTIC</div>
-      <img src="./assets/images/logo.png" class="img" alt="Semantic works" />
-      <div class="text">WORKS</div>
-    </div>
+    <LinkTo @route="main">
+      <div class="logo">
+        <div class="text">SEMANTIC</div>
+        <img src="./assets/images/logo.png" class="img" alt="Semantic works" />
+        <div class="text">WORKS</div>
+      </div>
+    </LinkTo>
     <div class="menu">
       <div class="item"><LinkTo @route="docs">Documentation</LinkTo></div>
       <div class="item"><LinkTo @route="tutorial">Tutorial</LinkTo></div>
