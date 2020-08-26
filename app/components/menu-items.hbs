@@ -1,0 +1,8 @@
+{{#each @docTree as |leaf|}}
+  {{#if (fn this.isArray leaf.value)}}
+    {{this.whitespace}}{{leaf.name}}<br>
+    <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}}/>
+  {{else}}
+    {{this.whitespace}}<button type="button">{{leaf.name}}</button>
+  {{/if}}
+{{/each}}
