@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-export default class MainController extends Controller {
+export default class IndexController extends Controller {
   rubyMirrorSettings = {
     lineNumbers: true,
     mode: 'ruby'
