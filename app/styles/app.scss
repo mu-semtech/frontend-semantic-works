@@ -3,80 +3,85 @@
   background-color: #000000;
   display: flex;
   justify-content: space-between;
+
+  .search{
+    display: inline-flex;
+    float: left;
+
+    .img{
+      height: 40px;
+      display: inline-flex;
+      margin-right: 20px;
+      margin-left: 30px;
+      margin-top: 5px;
+
+    }
+    .text{
+      color: #aaaaaa;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 100;
+      font-style: normal;
+
+      display: inline-flex;
+      margin-top: 15px;
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .logo{
+    display: inline-flex;
+    float: center;
+
+    .img{
+      height: 60px;
+      margin-right: 10px;
+      margin-left: 10px;
+      display: inline-flex;
+
+    }
+    .text{
+      color: #ffffff;
+      font-family: "Roboto";
+      font-size: 30px;
+      font-weight: 900;
+      font-style: normal;
+
+      display: inline-flex;
+      margin-top: 10px;
+    }
+  }
+
+  .menu{
+    display: inline-flex;
+    float: right;
+
+    .item{
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 16px;
+      font-weight: 100;
+      font-style: normal;
+
+      margin-top: 15px;
+      margin-right: 30px;
+      display: inline-flex;
+    }
+    .item:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
-  .sw-header .header .search{
-      display: inline-flex;
-      float: left;
-  }
-      .sw-header .header .search .img{
-          height: 40px;
-          display: inline-flex;
-          margin-right: 20px;
-          margin-left: 30px;
-          margin-top: 5px;
 
-      }
-      .sw-header .header .search .text{
-          color: #aaaaaa;
-          font-family: "Open Sans";
-          font-size: 16px;
-          font-weight: 100;
-          font-style: normal;
-
-          display: inline-flex;
-          margin-top: 15px;
-      }
-
-      .sw-header .header a {
-        color: inherit;
-        text-decoration: inherit;
-      }
-  .sw-header .header .logo{
-      display: inline-flex;
-      float: center;
-  }
-      .sw-header .header .logo .img{
-          height: 60px;
-          margin-right: 10px;
-          margin-left: 10px;
-          display: inline-flex;
-
-      }
-      .sw-header .header .logo .text{
-          color: #ffffff;
-          font-family: "Roboto";
-          font-size: 30px;
-          font-weight: 900;
-          font-style: normal;
-
-          display: inline-flex;
-          margin-top: 10px;
-      }
-  .sw-header .header .menu{
-      display: inline-flex;
-      float: right;
-  }
-      .sw-header .header .menu .item{
-          color: #ffffff;
-          font-family: "Open Sans";
-          font-size: 16px;
-          font-weight: 100;
-          font-style: normal;
-
-          margin-top: 15px;
-          margin-right: 30px;
-          display: inline-flex;
-      }
-        .sw-header .header .menu .item:hover{
-          text-decoration: underline;
-          cursor: pointer;
-        }
 .sw-header .slant{
-}
-  .sw-header .slant .img{
-      width: 100%;
-  }
 
+  .img{
+    width: 100%;
+  }
+}
 
 .sw-container{
   padding-left: 20%;
@@ -113,13 +118,13 @@
   font-style: normal;
 
 }
-  .sw-btn-big-rounded-w:hover{
-    border: 1px solid #000000;
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
+.sw-btn-big-rounded-w:hover{
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
 
-  }
+}
 
 .sw-btn-big-rounded-b{
 
@@ -138,34 +143,33 @@
   font-style: normal;
 
 }
-  .sw-btn-big-rounded-b:hover{
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-  }
+.sw-btn-big-rounded-b:hover{
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
 .sw-info{
   color: #000000;
 
   padding: 15px;
 
-}
+  .header{
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+  }
 
-.sw-info .header{
-  font-family: "Roboto";
-  font-size: 21px;
-  font-weight: 600;
-  font-style: normal;
-}
+  .body{
+    line-height: 180%;
 
-.sw-info .body{
-  line-height: 180%;
-
-  color: #000000;
-  font-family: "Open Sans";
-  font-size: 14px;
-  font-weight: 100;
-  font-style: normal;
+    color: #000000;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+  }
 
 }
 
@@ -236,13 +240,15 @@
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
-}
-  .sw-terminal .contents{
+
+  .contents{
+
+    .cash{
+      color: #000000;
+      font-weight: 700;
+    }
   }
-      .sw-terminal .contents .cash{
-          color: #000000;
-          font-weight: 700;
-      }
+}
 
 .sw-footer{
   text-align: center;
