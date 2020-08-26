@@ -63,6 +63,10 @@
           margin-right: 30px;
           display: inline-flex;
       }
+        .sw-header .header .menu .item:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
 .sw-header .slant{
 }
   .sw-header .slant .img{
@@ -105,6 +109,13 @@
   font-style: normal;
 
 }
+  .sw-btn-big-rounded-w:hover{
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+
+  }
 
 .sw-btn-big-rounded-b{
 
@@ -123,7 +134,12 @@
   font-style: normal;
 
 }
-
+  .sw-btn-big-rounded-b:hover{
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+  }
 .sw-info{
   color: #000000;
 
@@ -161,6 +177,9 @@
   font-weight: 100;
   font-style: normal;
 }
+.sw-btn-small-w:hover{
+  cursor: pointer;
+}
 .sw-btn-small-b{
   border: 1px solid #000000;
 
@@ -173,7 +192,9 @@
   font-size: 20px;
   font-weight: 100;
   font-style: normal;
-
+}
+.sw-btn-small-b:hover{
+  cursor: pointer;
 }
 .sw-btn-small-r{
   padding: 15px 50px;
@@ -185,7 +206,9 @@
   font-size: 20px;
   font-weight: 100;
   font-style: normal;
-
+}
+.sw-btn-small-r:hover{
+  cursor: pointer;
 }
 
 .sw-img-fill{
@@ -247,7 +270,7 @@
 }
 
 .sw-tutorial-img{
-  width: 100%;
+  max-width:100%;
 }
 
 .sw-tutorial-btn{
@@ -262,4 +285,14 @@
   font-weight: 300;
   letter-spacing: 5px;
   font-style: normal;
+  border: #f44336 1px solid;
+}
+.sw-tutorial-btn:hover{
+  background-color: #ffffff;
+  color: #f44336;
+  border: #f44336 1px solid;
+  cursor: pointer;
+}
+.CodeMirror{
+  height: auto;
 }
