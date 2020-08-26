@@ -1,8 +1,10 @@
 {{#each @docTree as |leaf|}}
-  {{#if (fn this.isArray leaf.value)}}
-    {{this.whitespace}}{{leaf.name}}<br>
-    <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}}/>
-  {{else}}
-    {{this.whitespace}}<button type="button">{{leaf.name}}</button>
+  {{#if leaf.value}}
+    {{#if leaf.link}}
+      {{this.whitespace}}<button type="button" {{on "click" (fn @clickHandler leaf.value)}}>{{leaf.name}}</button><br>
+    {{else}}
+      {{this.whitespace}}{{leaf.name}}<br>
+    {{/if}}
+    <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}} @clickHandler={{@clickHandler}}/>
   {{/if}}
 {{/each}}

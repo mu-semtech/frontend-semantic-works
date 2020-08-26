@@ -18,11 +18,7 @@ export default class MenuItemsComponent extends Component {
   nextLevel=this.args.level+1;
 
   @action
-  isArray(variable){
-    debugger;
-    if(typeof(variable)=='array'){
-      return true;
-    }
-    return false;
+  clickHandler(url){
+
   }
 }
