@@ -1,6 +1,19 @@
 import Controller from '@ember/controller';
 
-export default class MainController extends Controller {
+export default class IndexController extends Controller {
+  rubyMirrorSettings = {
+    lineNumbers: true,
+    mode: 'ruby'
+  };
+  rubyMirrorValue=
+`get '/hello/' do
+  counter = query( "SELECT COUNT (*) as ?counter" +
+                   "WHERE {" +
+                   "  ?s ?p ?o." +
+                   "}" ).first[:counter].to_i
+  status 200
+  { value: counter }.to_json
+end`;
   codemirrorSettings={
     lineNumbers: true,
     mode: 'javascript'
