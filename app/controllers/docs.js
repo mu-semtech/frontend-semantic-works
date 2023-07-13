@@ -12,7 +12,7 @@ export default class DocsController extends Controller {
           "value": [
             {"name": "Project template", "value":"https://raw.githubusercontent.com/mu-semtech/mu-project/master/README.md", "link": true},
             {"name": "Identifier", "value":"https://raw.githubusercontent.com/mu-semtech/mu-identifier/master/README.md", "link": true},
-            {"name": "Dispather", "value":"https://raw.githubusercontent.com/mu-semtech/mu-dispatcher/master/README.md", "link": true},
+            {"name": "Dispatcher", "value":"https://raw.githubusercontent.com/mu-semtech/mu-dispatcher/master/README.md", "link": true},
             {"name": "Authorization", "value":"https://raw.githubusercontent.com/mu-semtech/mu-authorization/master/README.md", "link": true},
             {"name": "Delta notifier", "value":"https://raw.githubusercontent.com/mu-semtech/delta-notifier/master/README.md", "link": true}
           ]
