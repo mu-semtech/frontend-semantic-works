@@ -21,7 +21,18 @@
     {{content-for "body"}}
 
     <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <script type="module">
+      // Import element definition
+      import ZeroMd, { STYLES } from 'https://cdn.jsdelivr.net/npm/zero-md@3'
+      // Register
+      customElements.define('zero-md', class extends ZeroMd {
+        async load() {
+          await super.load();
+          this.template = STYLES.preset('light');
+        }
+      });
+    </script>
+
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/semantic-works.js"></script>
 
