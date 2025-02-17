@@ -1004,4 +1004,7 @@ Accept: application/vnd.api+json
 // Request duration: 0.061559s
 ```
 
-Well done! You've built your first application with semantic.works
+# Next steps
+
+Well done! You've built your first application with semantic.works.  The most effective next steps are building a small CRUD application for a known domain and reading the README files of common core services whilst you're at it.
+
