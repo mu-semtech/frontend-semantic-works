@@ -6,10 +6,11 @@ import { htmlSafe } from '@ember/template';
 export default class MenuItemsComponent extends Component {
   constructor(...args){
     super(...args);
-
+    let whitespace = "";
     for(var i=0; i<this.args.level; i++){
-      this.whitespace=htmlSafe(this.whitespace+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+      whitespace = htmlSafe(whitespace + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
     }
+    this.whitespace = whitespace;
   }
   @tracked
   whitespace="";
