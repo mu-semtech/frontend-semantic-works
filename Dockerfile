@@ -1,4 +1,4 @@
-FROM madnificent/ember:3.28.5 as builder
+FROM madnificent/ember:6.0.0 as builder
 
 LABEL maintainer="aad@semantic.works"
 
