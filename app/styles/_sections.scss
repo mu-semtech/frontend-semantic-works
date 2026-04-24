@@ -85,6 +85,12 @@
     font-size: 0.7rem;
   }
 
+  // Graph (purple) variant overrides the sky defaults above
+  &.sw-card--graph .sw-card-icon {
+    background: $color-graph-light;
+    color: $color-graph;
+  }
+
   h3 {
     font-size: 1.1rem;
     margin-bottom: $space-2;
@@ -167,6 +173,13 @@
   margin-bottom: $space-4;
   box-shadow: 0 0 0 6px $color-sky-light, $shadow-sm;
   flex-shrink: 0;
+
+  // Destination step — linked data, sovereign, purple
+  &--graph {
+    border-color: $color-graph;
+    color: $color-graph;
+    box-shadow: 0 0 0 6px $color-graph-light, $shadow-sm;
+  }
 }
 
 .sw-journey-step h3 {
@@ -404,7 +417,7 @@
   display: inline-flex;
   align-items: center;
   padding: $space-3 $space-6;
-  border: 1px solid $color-border;
+  border: 1px solid $color-graph-mid;
   border-radius: $radius-md;
   background: $color-surface;
   font-family: $font-heading;
@@ -415,9 +428,9 @@
               box-shadow $transition-base;
 
   &:hover {
-    border-color: $color-sky;
-    color: $color-sky-dark;
-    box-shadow: $shadow-sky;
+    border-color: $color-graph;
+    color: $color-graph-dark;
+    box-shadow: $shadow-graph;
   }
 }
 

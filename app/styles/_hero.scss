@@ -5,6 +5,7 @@
   background: linear-gradient(160deg, $color-sky-light 0%, #ffffff 65%);
   padding: $space-24 0 $space-20;
   overflow: hidden;
+  position: relative;
 }
 
 .sw-hero-inner {
@@ -15,6 +16,8 @@
   grid-template-columns: 55% 45%;
   gap: $space-12;
   align-items: center;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: $bp-lg) {
     grid-template-columns: 1fr;
@@ -175,3 +178,52 @@
   width: 100%;
   max-width: 420px;
 }
+
+// ─── Background graph decoration ─────────────────────────────────────────────
+// A ghost graph of linked-data nodes and edges sits behind the hero content.
+// Purple + sky, very low opacity, pulsing asynchronously — graph glitter.
+.sw-hero-graph {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sw-hero-graph-svg {
+  position: absolute;
+  right: -2%;
+  top: 0;
+  width: 60%;
+  height: 100%;
+}
+
+.sw-bg-edge {
+  stroke: rgba(75, 0, 120, 0.09);
+  stroke-width: 1;
+  fill: none;
+}
+
+@keyframes bg-node-glow {
+  0%, 100% { opacity: 0.32; }
+  50%       { opacity: 0.82; }
+}
+
+.sw-bg-node {
+  animation: bg-node-glow 3.8s ease-in-out infinite;
+
+  &--graph { fill: rgba(75, 0, 120, 0.22); }
+  &--sky   { fill: rgba(14, 165, 233, 0.16); }
+}
+
+// Stagger each background node independently so they don't all pulse at once
+#bg-n1  { animation-delay: 0s; }
+#bg-n2  { animation-delay: 0.38s; }
+#bg-n3  { animation-delay: 0.76s; }
+#bg-n4  { animation-delay: 1.14s; }
+#bg-n5  { animation-delay: 1.52s; }
+#bg-n6  { animation-delay: 1.9s; }
+#bg-n7  { animation-delay: 2.28s; }
+#bg-n8  { animation-delay: 2.66s; }
+#bg-n9  { animation-delay: 3.04s; }
+#bg-n10 { animation-delay: 3.42s; }

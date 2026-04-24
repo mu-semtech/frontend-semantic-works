@@ -69,9 +69,9 @@
               border-color $transition-base;
 
   &:hover {
-    box-shadow: $shadow-md;
+    box-shadow: 0 8px 28px rgba(75, 0, 120, 0.1), 0 2px 8px rgba(75, 0, 120, 0.06);
     transform: translateY(-2px);
-    border-color: #c8d3de;
+    border-color: $color-graph-mid;
   }
 }
 
@@ -81,6 +81,10 @@
 
 .sw-card--red {
   border-top: 3px solid $color-red;
+}
+
+.sw-card--graph {
+  border-top: 3px solid $color-graph;
 }
 
 .sw-card-icon {
@@ -215,6 +219,8 @@
     border-radius: $radius-full;
     background: $color-sky;
     margin-top: 0.45rem;
+
+    &--graph { background: $color-graph; }
   }
 
   .sw-service-name {
