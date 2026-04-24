@@ -1,31 +1,44 @@
-<div class="sw-header">
-  <div class="header">
-    <div class="search" style="visibility: hidden">
-      {{!-- Hide the search since we don't have a search function yet --}}
-      <img src="./assets/images/search.png" class="img" alt="Search icon" />
-      <div class="text">Search the docs...</div>
-    </div>
-    <LinkTo @route="index">
-      <div class="logo">
-        <div class="text">SEMANTIC</div>
-        <img src="./assets/images/logo.png" class="img" alt="Semantic works" />
-        <div class="text">WORKS</div>
-      </div>
+<nav class="sw-nav">
+  <div class="sw-nav-inner">
+    <LinkTo @route="index" class="sw-nav-brand">
+      <img src="assets/images/mu-man-redraw.svg" class="sw-nav-logo" alt="" aria-hidden="true">
+      <span class="sw-nav-name">semantic<span class="sw-nav-dot">·</span>works</span>
     </LinkTo>
-    <div class="menu">
-      <div class="item"><LinkTo @route="docs">Documentation</LinkTo></div>
-      <div class="item"><LinkTo @route="tutorial">Tutorial</LinkTo></div>
-      <div class="item"><a href="https://mu.semte.ch/">Blog</a></div>
-      <div class="item"><a href="https://github.com/mu-semtech/">GitHub</a></div>
+    <div class="sw-nav-links">
+      <LinkTo @route="docs">Documentation</LinkTo>
+      <LinkTo @route="tutorial">Tutorial</LinkTo>
+      <a href="https://github.com/mu-semtech/" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
-  <div class="slant">
-    {{!-- TODO: this should probably become a div with a background image to make it nicely accessible --}}
-    {{!-- template-lint-disable require-valid-alt-text --}}
-    <img class="img" src="assets/images/slant.png" />
-  </div>
-</div>
+</nav>
+
 {{outlet}}
-<div class='sw-footer'>
-  © Copyright 2025 – semantic.works
-</div>
+
+<footer class="sw-footer">
+  <div class="sw-footer-inner">
+    <div class="sw-footer-brand">
+      <img src="assets/images/mu-man-redraw.svg" class="sw-footer-logo" alt="semantic.works">
+      <span class="sw-footer-name">semantic·works</span>
+      <p class="sw-footer-tagline">
+        Microservices fuelled by Linked Data. An open, sovereign framework
+        for applications that live for a decade.
+      </p>
+    </div>
+    <div class="sw-footer-col">
+      <h4>Framework</h4>
+      <LinkTo @route="docs">Documentation</LinkTo>
+      <LinkTo @route="tutorial">Tutorial</LinkTo>
+      <a href="https://github.com/mu-semtech/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/mu-semtech/mu-cli" target="_blank" rel="noopener noreferrer">mu-cli</a>
+    </div>
+    <div class="sw-footer-col">
+      <h4>Community</h4>
+      <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">mu-semtech on GitHub</a>
+      <a href="https://github.com/mu-semtech/mu-project/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing</a>
+    </div>
+  </div>
+  <div class="sw-footer-bottom">
+    <p>© 2025 semantic.works · Open Source · EU Sovereign</p>
+    <p>Built by Sirus, Inuits, redpencil.io, Faros, and others</p>
+  </div>
+</footer>

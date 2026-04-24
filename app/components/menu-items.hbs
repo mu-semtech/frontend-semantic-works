@@ -1,9 +1,13 @@
 {{#each @docTree as |leaf|}}
   {{#if leaf.value}}
     {{#if leaf.link}}
-      {{this.whitespace}}<button class="tree-button" type="button" {{on "click" (fn @clickHandler leaf.value)}}>{{leaf.name}}</button><br>
+      <button
+        class="docs-nav-link docs-nav-level-{{@level}}"
+        type="button"
+        {{on "click" (fn @clickHandler leaf.value)}}
+      >{{leaf.name}}</button>
     {{else}}
-      {{this.whitespace}}{{leaf.name}}<br>
+      <div class="docs-nav-section docs-nav-level-{{@level}}">{{leaf.name}}</div>
     {{/if}}
     <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}} @clickHandler={{@clickHandler}}/>
   {{/if}}

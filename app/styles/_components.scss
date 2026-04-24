@@ -1,0 +1,241 @@
+@import 'variables';
+
+// ─── Buttons ──────────────────────────────────────────────────────────────────
+.sw-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: 0.75rem 1.75rem;
+  border-radius: $radius-md;
+  font-family: $font-heading;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color $transition-fast, color $transition-fast,
+              border-color $transition-fast, box-shadow $transition-fast,
+              transform $transition-fast;
+  white-space: nowrap;
+
+  &:active { transform: translateY(1px); }
+}
+
+.sw-btn--primary {
+  background-color: $color-red;
+  color: #ffffff;
+  border-color: $color-red;
+
+  &:hover {
+    background-color: $color-red-dark;
+    border-color: $color-red-dark;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+  }
+}
+
+.sw-btn--secondary {
+  background-color: transparent;
+  color: $color-sky-dark;
+  border-color: $color-sky;
+
+  &:hover {
+    background-color: $color-sky-light;
+    color: $color-sky-deeper;
+    border-color: $color-sky-dark;
+  }
+}
+
+.sw-btn--outline-white {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.6);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+}
+
+// ─── Cards ────────────────────────────────────────────────────────────────────
+.sw-card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-8;
+  transition: box-shadow $transition-base, transform $transition-base,
+              border-color $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+    border-color: #c8d3de;
+  }
+}
+
+.sw-card--sky {
+  border-top: 3px solid $color-sky;
+}
+
+.sw-card--red {
+  border-top: 3px solid $color-red;
+}
+
+.sw-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-md;
+  background: $color-sky-light;
+  color: $color-sky-dark;
+  font-family: $font-heading;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: $space-4;
+}
+
+.sw-card-title {
+  font-family: $font-heading;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $color-heading;
+  margin-bottom: $space-2;
+}
+
+.sw-card-body {
+  font-size: 0.925rem;
+  color: $color-body;
+  line-height: 1.65;
+}
+
+.sw-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  margin-top: $space-4;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $color-sky-dark;
+  text-decoration: none;
+  transition: gap $transition-fast, color $transition-fast;
+
+  &::after { content: '→'; }
+
+  &:hover {
+    color: $color-sky;
+    gap: $space-2;
+  }
+}
+
+// ─── Terminal block ────────────────────────────────────────────────────────────
+.sw-terminal {
+  background: $color-sky-deeper;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-lg;
+
+  .terminal-chrome {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: $radius-full;
+    }
+    .dot-red    { background: #ff5f57; }
+    .dot-yellow { background: #febc2e; }
+    .dot-green  { background: #28c840; }
+  }
+
+  .terminal-body {
+    margin: 0;
+    padding: $space-6 $space-8;
+    font-family: $font-mono;
+    font-size: 0.875rem;
+    line-height: 1.9;
+    color: #e2e8f0;
+    overflow-x: auto;
+
+    .cmd {
+      color: $color-sky;
+      font-weight: 600;
+      margin-right: $space-2;
+      user-select: none;
+    }
+    .comment {
+      color: #64748b;
+    }
+  }
+}
+
+// ─── Stat pill ────────────────────────────────────────────────────────────────
+.sw-stat {
+  text-align: center;
+
+  .sw-stat-number {
+    display: block;
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-red;
+    line-height: 1;
+    margin-bottom: $space-1;
+  }
+
+  .sw-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: $color-muted;
+    font-weight: 400;
+  }
+}
+
+// ─── Service list item ────────────────────────────────────────────────────────
+.sw-service-item {
+  display: flex;
+  gap: $space-4;
+  padding: $space-4 0;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child { border-bottom: none; }
+
+  .sw-service-dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: $radius-full;
+    background: $color-sky;
+    margin-top: 0.45rem;
+  }
+
+  .sw-service-name {
+    font-family: $font-heading;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $color-heading;
+    margin-bottom: 0.15rem;
+  }
+
+  .sw-service-desc {
+    font-size: 0.875rem;
+    color: $color-body;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+// ─── Divider ──────────────────────────────────────────────────────────────────
+.sw-divider {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: 0;
+}

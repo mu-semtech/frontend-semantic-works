@@ -1,174 +1,418 @@
-<div class="sw-container">
-  <div class="sw-segment">
-    <div class="sw-catchy">
-      A microservice framework
-      <br>
-      powered by Linked Data
-      <br>
-      <br>
-      <LinkTo @route="tutorial" class="sw-btn-big-rounded-w">GET STARTED</LinkTo>
-      <LinkTo @route="docs" class="sw-btn-big-rounded-b">GO TO DOCS</LinkTo>
-    </div>
-  </div>
+{{! ─── Hero ─────────────────────────────────────────────────────────── }}
+<section class="sw-hero">
+  <div class="sw-hero-inner">
 
-  <div class="sw-segment">
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Fuelled by Linked Data</p>
-          <p class="body">
-            Semantic.works offers a lightweight microservice framework that works in practice. <br>
-            Microservices communicate through a shared semantic model resulting in a maintainable and extendable architecture instead of the typical microservice chaos.
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Based on open standards</p>
-          <p class="body">
-            Semantic.works envisions an open internet. <br>
-            It depends on open standards used in modern web application development such as HTTP, JSONAPI and SPARQL. All tools and components are open source and available to the community. Introducing vendor lock-in is not the ambition at all.
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Building on the shoulders of giants</p>
-          <p class="body">
-            Semantic.works doesn’t reinvent the wheel.<br>
-            The framework imposes a couple of requirements, but mainly builds on well-known tools and frameworks such as Docker, ElasticSearch and Express that have a proven track record in production environments.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Pick the right tool for the job</p>
-          <p class="body">
-            Microservices tend to be small and simple, just fulfulling one single job in an isolated environment. The user has the flexibility to select the best tool for the job for each single microservice. Be it a web service in Ruby, JavaScript or even Lisp. It also creates the opportunity to easily experiment with new technologies in existing applications.
-            <br>
-            <br>
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Raising developer productivity</p>
-          <p class="body">
-            Developers should spend their valuable time solving business-specific problems, not implementing the same boiler plate code over and over again. Semantic.works offers tooling, templates and reusable components in various languages in order to drive developer productivity to unprecedented levels.
-            <br>
-            <br>
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="sw-info">
-          <p class="header">Reuse that works in practice</p>
-          <p class="body">
-            Based on standardized semantic models, many backend services are easy to reuse. Semantic.works offers services for login, registration, regular resource listing and creation, migrations, exports, etc. All of those service work out-of-the-box. Some require a bit of configuration, but no need to master all the languages they're written in.
-            <br>
-            <br>
-          </p>
-        </div>
+    <div class="sw-hero-text">
+      <span class="sw-eyebrow">Open source · EU sovereign · Since 2013</span>
+      <h1>Microservices fuelled by <em>Linked Data</em>.</h1>
+      <p class="sw-hero-subtitle">
+        A transitional architecture that walks you from monolith to sovereign, distributed data
+        — without a big bang rewrite. Built on HTTP, JSON:API, SPARQL, and Docker.
+        Easy path forward. Escape hatches where you need them.
+      </p>
+      <div class="sw-hero-ctas">
+        <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Get Started →</LinkTo>
+        <LinkTo @route="docs" class="sw-btn sw-btn--secondary">Explore the docs</LinkTo>
       </div>
     </div>
 
-    {{!-- Test buttons
-                                    <div class="pure-g">
-                                    <div class="pure-u-1-3">
-                                    <span class="sw-btn-small-b">BUTTON</span>
-                                    </div>
-                                    <div class="pure-u-1-3">
-                                    <span class="sw-btn-small-w">BUTTON</span>
-                                    </div>
-                                    <div class="pure-u-1-3">
-                                    <span class="sw-btn-small-r">IMPORTANT</span>
-                                    </div>
-                                    </div>
-                                    --}}
+    <div class="sw-hero-visual">
+      <div class="sw-kite-wrap">
+        {{! Inline SVG — the mu-man kite. Nodes pulse to signal the graph coming alive. }}
+        <svg viewBox="10 55 195 180" xmlns="http://www.w3.org/2000/svg" class="sw-kite" role="img" aria-label="The mu-man: a kite whose nodes form a graph — connect them and a face appears">
+          <defs>
+            <clipPath id="kite-eye-left">
+              <path d="m 53.600263,122.03382 c 17.494821,-1.36833 35.06552,-1.72434 52.487067,-1.92025 -17.433387,3.80104 -34.737865,8.23678 -50.9286,15.47339 0.631007,-4.35803 0.254759,-9.04697 -1.558467,-13.55314 z" />
+            </clipPath>
+            <clipPath id="kite-eye-right">
+              <path d="m 117.49756,119.00037 c 17.584,-1.64244 34.6143,-2.02711 52.51838,-2.00722 -1.93136,4.24303 -1.21014,9.06632 -0.8662,13.80707 -16.06897,-4.68896 -32.29928,-9.08332 -50.04848,-10.70405 z" />
+            </clipPath>
+          </defs>
 
-  </div>
+          {{! Strings / edges connecting the graph nodes }}
+          <path class="sw-kite-edge" d="M 32.430439,94.693736 C 56.535655,91.901724 88.901045,82.705909 110.1857,73.013545" />
+          <path class="sw-kite-edge" d="m 121.99004,73.291327 c 18.72758,12.460574 36.30997,18.726415 56.73159,22.386342" />
+          <path class="sw-kite-edge" d="m 183.52323,103.68689 c -11.34529,30.56586 -18.87736,62.65275 -20.58388,97.40939" />
+          <path class="sw-kite-edge" d="M 91.702579,223.15606 C 111.65822,214.15224 132.95988,209.95563 154.98917,208.3577" />
+          <path class="sw-kite-edge" d="m 58.642421,208.27899 c 7.005007,3.45807 14.109283,7.80955 21.410388,13.93249" />
+          <path class="sw-kite-edge" d="m 28.943027,101.96852 c 12.048391,31.93058 20.08237,64.24965 22.931784,97.07046" />
+          <path class="sw-kite-edge" d="m 41.12841,214.14323 c 3.436703,-1.46293 5.645256,-3.27675 7.005605,-5.33292" />
 
-  <div class="sw-segment">
-    <div class="sw-catchy">
-      Trusted and used by
-      <br>
-      <img src='assets/images/clients.png' class="sw-img-fill">
-    </div>
-  </div>
+          {{! Kite wing shapes (the "eyes" / brow features of the face) }}
+          <path class="sw-kite-wing" d="m 53.600262,122.03382 c 17.494821,-1.36833 35.065522,-1.72434 52.487068,-1.92025 -17.433388,3.80104 -34.737866,8.23678 -50.928599,15.47339 0.631006,-4.35803 0.254759,-9.04697 -1.558469,-13.55314 z" />
+          <path class="sw-kite-wing" d="m 117.49756,119.00037 c 17.584,-1.64244 34.6143,-2.02711 52.51838,-2.00722 -1.93136,4.24303 -1.21014,9.06632 -0.8662,13.80707 -16.06897,-4.68896 -32.29928,-9.08332 -50.04848,-10.70405 z" />
 
-  {{!-- Code samples
-  <div class="sw-segment">
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="sw-info">
-          <p class="header">Lorem ipsum dolor sit amet.</p>
-          <p class="body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisi nec lectus semper luctus eget ut nibh. Fusce aliquet at velit eget tempor. Nam ac arcu sem. Nunc dictum, urna ac pellentesque luctus, orci purus consequat dui, lacinia malesuada orci nisl eu ex. Quisque egestas mi sapien. Maecenas placerat sodales gravida. Donec id dui mi.
-            <br>
-            Mauris tempus ultrices leo eu porta. Morbi pulvinar varius nunc, in eleifend lectus vulputate condimentum.
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div class="sw-info">
-          <p class='sw-file-path'>something/other.file</p>
-          <IvyCodemirror @value={{this.codemirrorValue}} @options={{this.codemirrorSettings}}/>
-        </div>
-      </div>
-    </div>
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="sw-info">
-          <p class='sw-file-path'>count-service/web.rb</p>
-          <IvyCodemirror @value={{this.rubyMirrorValue}} @options={{this.rubyMirrorSettings}}/>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div class="sw-info">
-          <p class="header">Lorem ipsum dolor sit amet.</p>
-          <p class="body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nisi nec lectus semper luctus eget ut nibh. Fusce aliquet at velit eget tempor. Nam ac arcu sem. Nunc dictum, urna ac pellentesque luctus, orci purus consequat dui, lacinia malesuada orci nisl eu ex. Quisque egestas mi sapien. Maecenas placerat sodales gravida. Donec id dui mi.
-            <br>
-            Mauris tempus ultrices leo eu porta. Morbi pulvinar varius nunc, in eleifend lectus vulputate condimentum.
-          </p>
-        </div>
+          {{! Eye highlights clipped to the wing shape }}
+          <circle class="sw-kite-eye" cx="77.923538" cy="125.06727" r="8.2535915" clip-path="url(#kite-eye-left)" />
+          <circle class="sw-kite-eye" cx="145.57787" cy="121.61637" r="8.2535915" clip-path="url(#kite-eye-right)" />
+
+          {{! Mouth / smile }}
+          <path class="sw-kite-mouth" d="m 79.875702,195.35011 c 20.465118,-9.81684 42.041288,-12.30065 63.169648,-17.7401 l 0.24485,-1.15142 c -21.99224,0.72524 -43.984082,1.45526 -65.903849,3.05019 l 0.26566,1.5251 c 1.956335,2.94463 2.117797,7.94896 1.829996,13.46883 z" />
+          <path class="sw-kite-edge" d="m 77.056699,180.4551 c 1.956335,2.94463 2.481599,9.12305 2.193798,14.64292 m 0.344085,0.61589 c 20.465118,-9.81684 43.018148,-12.68199 64.146508,-18.12144 m 0.50209,-1.13388 c -21.99224,0.72524 -45.251255,1.53794 -67.171022,3.13287" />
+
+          {{! Eye detail strokes }}
+          <path class="sw-kite-edge" d="m 53.210645,123.64796 0.417446,-2.53252" />
+          <path class="sw-kite-edge" d="m 103.66614,121.78336 4.09098,-3.53439" />
+          <path class="sw-kite-edge" d="m 54.296008,133.49972 1.641959,3.14477" />
+          <path class="sw-kite-edge" d="m 115.54947,117.60888 4.39712,3.28392" />
+          <path class="sw-kite-edge" d="m 169.98463,116.21739 0.61226,2.50469" />
+          <path class="sw-kite-edge" d="m 170.04029,128.3512 -1.33583,3.28392" />
+          <path class="sw-kite-edge" d="m 78.478787,178.43503 -1.594449,3.61675" />
+          <path class="sw-kite-edge" d="m 144.80973,175.00779 -4.1939,4.48138" />
+          <path class="sw-kite-edge" d="m 78.609782,193.48149 2.15652,2.67579" />
+
+          {{! Graph nodes — these pulse to life, connecting to reveal the face }}
+          <circle class="sw-node sw-node-red" id="node-1" cx="26.460918" cy="95.923607" r="4.7483106" />
+          <circle class="sw-node sw-node-red" id="node-2" cx="116.25047"  cy="70.471619" r="4.7483106" />
+          <circle class="sw-node sw-node-red" id="node-3" cx="185.12976"  cy="97.612762" r="4.7483106" />
+          <circle class="sw-node sw-node-red" id="node-4" cx="161.42705"  cy="207.60002" r="4.7483106" />
+          <circle class="sw-node sw-node-red" id="node-5" cx="85.752747"  cy="224.99597" r="4.7483106" />
+          <circle class="sw-node sw-node-sky" id="node-6" cx="52.92461"   cy="205.32579" r="4.7483106" />
+          <circle class="sw-node sw-node-sky" id="node-7" cx="36.575768"  cy="217.74437" r="4.7483106" />
+        </svg>
       </div>
 
+      <div class="sw-hero-terminal">
+        <div class="sw-terminal">
+          <div class="terminal-chrome">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <pre class="terminal-body"><span class="cmd">$</span> mu project new my-app
+<span class="cmd">$</span> cd my-app
+<span class="cmd">$</span> docker-compose up
+<span class="comment"># Your semantic backend is running.</span></pre>
+        </div>
+      </div>
     </div>
 
   </div>
-  --}}
+</section>
 
-  {{!--
-    <div class="sw-segment">
-    <div class="sw-catchy">
-    Made It This Far?
-    <br>
-    Why Not Give It a Try...
-    <br><br>
+{{! ─── Social Proof Strip ─────────────────────────────────────────────── }}
+<section class="sw-proof">
+  <div class="sw-proof-inner">
+    <div class="sw-proof-stats">
+      <div class="sw-stat">
+        <span class="sw-stat-number">12+</span>
+        <span class="sw-stat-label">years in production</span>
+      </div>
+      <div class="sw-stat">
+        <span class="sw-stat-number">40+</span>
+        <span class="sw-stat-label">applications shipped</span>
+      </div>
+      <div class="sw-stat">
+        <span class="sw-stat-number">6+</span>
+        <span class="sw-stat-label">companies contributing</span>
+      </div>
+      <div class="sw-stat">
+        <span class="sw-stat-number">100%</span>
+        <span class="sw-stat-label">open source</span>
+      </div>
     </div>
-    <div class="pure-g">
-    <div class="pure-u-1-3">
-    </div>
-    <div class="pure-u-1-3">
-    <div class="sw-terminal">
-    <div class="contents">
-    <span class='cash'>$</span> git clone https://github.com/mu-semtech/mu-project<br><br>
+    <p class="sw-proof-note">
+      First presented at USEWOD 2015 · Deployed in Belgian public services · Multiple conference talks
+    </p>
+  </div>
+</section>
 
-    <span class='cash'>$</span> cd mu-project<br><br>
+{{! ─── Standards Foundation ───────────────────────────────────────────── }}
+<section class="sw-section sw-standards">
+  <div class="sw-container">
+    <h2 class="sw-section-title">Built on what the web already trusts.</h2>
+    <p class="sw-section-subtitle">
+      No proprietary protocols. No exotic dependencies. semantic.works is the glue
+      that connects open standards into a coherent, productive architecture.
+    </p>
+    <div class="sw-standards-grid">
+      <div class="sw-card sw-card--sky sw-standard-card">
+        <div class="sw-card-icon">HTTP</div>
+        <h3>HTTP</h3>
+        <p>The universal transport. Every microservice speaks it. Every team already knows it.</p>
+      </div>
+      <div class="sw-card sw-card--sky sw-standard-card">
+        <div class="sw-card-icon">JSON</div>
+        <h3>JSON:API</h3>
+        <p>Consistent, predictable APIs across every service. No custom contracts to negotiate.</p>
+      </div>
+      <div class="sw-card sw-card--sky sw-standard-card">
+        <div class="sw-card-icon">SPQL</div>
+        <h3>SPARQL</h3>
+        <p>Query your entire data graph with a single, powerful standard. No joins. No migrations.</p>
+      </div>
+      <div class="sw-card sw-card--sky sw-standard-card">
+        <div class="sw-card-icon">🐳</div>
+        <h3>Docker</h3>
+        <p>Every microservice runs in isolation. Scale exactly what you need, when you need it.</p>
+      </div>
+    </div>
+    <p class="sw-section-note">
+      No lock-in. Your data stays yours. Your stack is yours.
+    </p>
+  </div>
+</section>
 
-    <span class='cash'>$</span> docker-compose up<br><br>
-    </div>
-    </div>
-    </div>
-    <div class="pure-u-1-3">
-    </div>
+{{! ─── The Journey ────────────────────────────────────────────────────── }}
+<section class="sw-section sw-section--sky sw-journey">
+  <div class="sw-container">
+    <h2 class="sw-section-title">Meet your architecture where it is.</h2>
+    <p class="sw-section-subtitle">
+      You don't have to throw everything away. semantic.works is a transitional architecture —
+      it walks alongside you, step by step, toward data that is sovereign, linked, and alive.
+    </p>
+
+    <div class="sw-journey-steps">
+      <div class="sw-journey-step">
+        <div class="sw-journey-dot">1</div>
+        <h3>Monolith</h3>
+        <p>One big application. Works today. Hard to change. Costly to scale. The place most teams start.</p>
+      </div>
+      <div class="sw-journey-step">
+        <div class="sw-journey-dot">2</div>
+        <h3>Semantic layer</h3>
+        <p>Microservices that share a data model. No integration chaos. Each service does one thing well, in any language.</p>
+      </div>
+      <div class="sw-journey-step">
+        <div class="sw-journey-dot">3</div>
+        <h3>Sovereign data</h3>
+        <p>Distributed. Linked. Queryable from anywhere. You own it. No vendor holds the key.</p>
+      </div>
     </div>
 
-    </div>
-    --}}
+    <p class="sw-journey-note">
+      40+ applications in production across governments, public services, and enterprises
+      have walked this path with semantic.works.
+    </p>
 
-</div>
+    <div class="sw-contributors">
+      <span class="sw-contributors-label">Built with and by</span>
+      <span class="sw-contributor">Sirus</span>
+      <span class="sw-contributor">Inuits</span>
+      <span class="sw-contributor">redpencil.io</span>
+      <span class="sw-contributor">Faros</span>
+      <span class="sw-contributor">and others</span>
+    </div>
+  </div>
+</section>
+
+{{! ─── The Five Pillars ───────────────────────────────────────────────── }}
+<section class="sw-section">
+  <div class="sw-container">
+    <div class="sw-pillars-intro">
+      <h2 class="sw-section-title">The backbone. Five services, everything you need to start.</h2>
+      <p class="sw-section-subtitle">
+        These are the load-bearing walls. Together they give you routing, a semantic data model,
+        security, and a triplestore — from a single <code>docker-compose up</code>.
+      </p>
+    </div>
+    <div class="sw-pillars-grid">
+      <div class="sw-card sw-card--red sw-pillar">
+        <div class="sw-card-icon">id</div>
+        <div class="sw-card-title">identifier</div>
+        <p class="sw-card-body">
+          Every request gets a session. The entry point that makes your architecture coherent.
+        </p>
+        <a href="https://github.com/mu-semtech/mu-identifier" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+      </div>
+      <div class="sw-card sw-card--red sw-pillar">
+        <div class="sw-card-icon">→</div>
+        <div class="sw-card-title">dispatcher</div>
+        <p class="sw-card-body">
+          Routes every request to the right microservice. Simple rules, powerful routing.
+        </p>
+        <a href="https://github.com/mu-semtech/mu-dispatcher" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+      </div>
+      <div class="sw-card sw-card--red sw-pillar">
+        <div class="sw-card-icon">res</div>
+        <div class="sw-card-title">mu-cl-resources</div>
+        <p class="sw-card-body">
+          Describe your data model, get a full JSON:API. No code. Just configuration.
+        </p>
+        <a href="https://github.com/mu-semtech/mu-cl-resources" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+      </div>
+      <div class="sw-card sw-card--red sw-pillar">
+        <div class="sw-card-icon">🔒</div>
+        <div class="sw-card-title">sparql-parser</div>
+        <p class="sw-card-body">
+          The security layer. Access rights expressed in SPARQL — transparent, auditable, powerful.
+        </p>
+        <a href="https://github.com/mu-semtech/sparql-parser" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+      </div>
+      <div class="sw-card sw-card--red sw-pillar">
+        <div class="sw-card-icon">db</div>
+        <div class="sw-card-title">Virtuoso</div>
+        <p class="sw-card-body">
+          The triplestore where your linked data lives. Proven, performant, standards-compliant.
+        </p>
+        <a href="https://github.com/openlink/virtuoso-opensource" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{! ─── Out of the Box ─────────────────────────────────────────────────── }}
+<section class="sw-section sw-section--sky">
+  <div class="sw-container">
+    <div class="sw-services-intro">
+      <h2 class="sw-section-title">Don't build what's already solved.</h2>
+      <p class="sw-section-subtitle">
+        The things every application needs are already built, tested in production, and
+        ready to drop in. Pick what you need. Leave the rest.
+      </p>
+    </div>
+    <div class="sw-services-grid">
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">Authorization</p>
+          <p class="sw-service-desc">Fine-grained, auditable access control through SPARQL. Every query filtered at the database level.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">Login services</p>
+          <p class="sw-service-desc">OAuth, username/password, or mock-login for development. Swap strategies without touching your app.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">mu-search</p>
+          <p class="sw-service-desc">Full-text search over your graph, powered by ElasticSearch. Index what you need, search the rest.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">File service</p>
+          <p class="sw-service-desc">Upload, download, store. Wired into your semantic model from day one.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">Push updates</p>
+          <p class="sw-service-desc">When data changes, your frontend knows immediately. No polling. No stale state.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">mu-cl-resources</p>
+          <p class="sw-service-desc">Any entity — products, people, documents — listed, created, and updated via JSON:API. Zero code.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">mu-javascript-template</p>
+          <p class="sw-service-desc">Start a new microservice in JavaScript in minutes. Access rights handled automatically via sparql-parser.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">mu-python-template</p>
+          <p class="sw-service-desc">The same, in Python. One command, a running service with semantic superpowers.</p>
+        </div>
+      </div>
+    </div>
+    <p class="sw-services-more">
+      And <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">200+ community repositories</a>
+      on GitHub — services, templates, and tooling built by the community.
+    </p>
+  </div>
+</section>
+
+{{! ─── Governance ─────────────────────────────────────────────────────── }}
+<section class="sw-section sw-governance">
+  <div class="sw-container">
+    <h2 class="sw-section-title">An easy path. With guardrails.</h2>
+    <div class="sw-governance-body">
+      <p>
+        A steering team oversees the evolution of the framework. Things change — the web changes —
+        but never in ways that pull the rug from under what you built yesterday.
+        Convention gives you speed. Escape hatches give you freedom.
+        This stack is designed to last as long as your application.
+      </p>
+      <p>
+        semantic.works is not a product with a roadmap driven by a single vendor.
+        It is a framework shaped by the teams who build on it — an act of collective
+        investment in an open web that remains open.
+      </p>
+    </div>
+    <div class="sw-governance-pillars">
+      <span class="sw-gov-pill">Backwards compatible evolution</span>
+      <span class="sw-gov-pill">Multi-actor steering</span>
+      <span class="sw-gov-pill">No single-vendor lock-in</span>
+      <span class="sw-gov-pill">EU digital sovereignty</span>
+      <span class="sw-gov-pill">Open standards throughout</span>
+    </div>
+  </div>
+</section>
+
+{{! ─── Getting Started ────────────────────────────────────────────────── }}
+<section class="sw-section sw-section--dark sw-start">
+  <div class="sw-start-inner">
+    <div class="sw-start-text">
+      <h2 class="sw-section-title">Three commands. Real app.</h2>
+      <p class="sw-section-subtitle">
+        Install <a href="https://github.com/mu-semtech/mu-cli" target="_blank" rel="noopener noreferrer">mu-cli</a>,
+        scaffold a new project, and start Docker. You have a working semantic backend
+        with a triplestore, routing, resources, and security — ready to build on.
+      </p>
+      <div class="sw-start-ctas">
+        <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Follow the tutorial →</LinkTo>
+        <LinkTo @route="docs" class="sw-btn sw-btn--outline-white">Read the docs</LinkTo>
+      </div>
+    </div>
+    <div>
+      <div class="sw-terminal">
+        <div class="terminal-chrome">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <pre class="terminal-body"><span class="cmd">$</span> mu project new my-app
+
+<span class="cmd">$</span> cd my-app
+
+<span class="cmd">$</span> docker-compose up
+<span class="comment"># Pulling images...
+# Starting triplestore, identifier,
+# dispatcher, resources...
+# Ready at http://localhost</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{! ─── Community ──────────────────────────────────────────────────────── }}
+<section class="sw-section sw-community">
+  <div class="sw-community-inner">
+    <h2 class="sw-section-title">Built by many. Owned by none.</h2>
+    <p class="sw-section-subtitle">
+      semantic.works is a community project. Multiple organisations and individuals
+      build with it, contribute to it, and depend on it in production.
+      There is no single company that can take it away.
+    </p>
+    <div class="sw-community-companies">
+      <span class="sw-company">Sirus</span>
+      <span class="sw-company">Inuits</span>
+      <span class="sw-company">redpencil.io</span>
+      <span class="sw-company">Faros</span>
+    </div>
+    <p class="sw-community-note">
+      Want to contribute? The framework is open source and welcomes new services,
+      templates, and ideas. Start on
+      <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">GitHub →</a>
+    </p>
+    <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer" class="sw-community-open">
+      View the mu-semtech organisation on GitHub
+    </a>
+  </div>
+</section>
+
 {{outlet}}

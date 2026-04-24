@@ -1,0 +1,61 @@
+@import 'variables';
+
+.sw-container {
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-px;
+  padding-right: $container-px;
+}
+
+.sw-section {
+  padding-top: $section-py;
+  padding-bottom: $section-py;
+}
+
+.sw-section--sky {
+  background-color: $color-sky-light;
+}
+
+.sw-section--dark {
+  background-color: $color-sky-deeper;
+  color: rgba(255, 255, 255, 0.9);
+
+  h2, h3, h4 { color: #ffffff; }
+  p { color: rgba(255, 255, 255, 0.8); }
+}
+
+.sw-section-eyebrow {
+  display: block;
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-sky-dark;
+  margin-bottom: $space-4;
+}
+
+.sw-section-title {
+  font-family: $font-heading;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  color: $color-heading;
+  margin-bottom: $space-4;
+}
+
+.sw-section-subtitle {
+  font-size: 1.125rem;
+  color: $color-body;
+  max-width: 640px;
+  margin-bottom: $space-10;
+  line-height: 1.7;
+}
+
+.sw-section-note {
+  font-size: 0.9rem;
+  color: $color-muted;
+  font-style: italic;
+  text-align: center;
+  margin-top: $space-8;
+}

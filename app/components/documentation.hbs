@@ -1,12 +1,16 @@
-<div class="pure-g">
-    <div class="pure-u-1-5">
-        <div class='sw-docs-menu'>
-            <MenuItems @docTree={{@docTree}} @level={{0}} @clickHandler={{this.changeDoc}}/>
-        </div>
-    </div>
-    <div class="pure-u-4-5">
-        <div class='sw-docs-contents'>
-            {{this.currentDoc}}
-        </div>
-    </div>
+<div class="sw-page-header">
+  <div class="sw-page-header-inner">
+    <span class="sw-page-header-eyebrow">semantic·works</span>
+    <h1>Documentation</h1>
+    <p>Explore the framework, services, templates, and tools. All documentation is pulled live from GitHub.</p>
+  </div>
+</div>
+
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <MenuItems @docTree={{@docTree}} @level={{0}} @clickHandler={{this.changeDoc}}/>
+  </aside>
+  <main class="docs-content">
+    {{this.currentDoc}}
+  </main>
 </div>

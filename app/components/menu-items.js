@@ -18,7 +18,7 @@ export default class MenuItemsComponent extends Component {
   nextLevel=this.args.level+1;
 
   @action
-  clickHandler(url){
+  clickHandler(){
 
   }
 }

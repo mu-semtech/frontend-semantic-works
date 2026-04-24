@@ -1,0 +1,98 @@
+@import 'variables';
+
+.sw-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $color-sky-dark;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 12px rgba(3, 105, 161, 0.3);
+}
+
+.sw-nav-inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sw-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #ffffff;
+
+  &:hover { color: rgba(255, 255, 255, 0.85); }
+}
+
+.sw-nav-logo {
+  height: 36px;
+  width: auto;
+  // For a white appearance on dark nav:
+  filter: brightness(0) invert(1);
+}
+
+.sw-nav-name {
+  font-family: $font-heading;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+
+  .sw-nav-dot {
+    color: $color-sky;
+  }
+}
+
+.sw-nav-links {
+  display: flex;
+  align-items: center;
+  gap: $space-8;
+
+  a, .ember-view > a, .active {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color $transition-fast;
+    letter-spacing: 0.01em;
+
+    &:hover { color: #ffffff; }
+  }
+
+  .active > a,
+  a.active {
+    color: #ffffff;
+    font-weight: 500;
+  }
+}
+
+// Ember LinkTo renders a wrapping <a> directly
+.sw-nav-links .ember-view {
+  display: contents;
+}
+
+@media (max-width: $bp-md) {
+  .sw-nav-links {
+    gap: $space-4;
+
+    a {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sw-nav-logo { height: 28px; }
+  .sw-nav-name { font-size: 1rem; }
+
+  .sw-nav-links {
+    gap: $space-3;
+    a { font-size: 0.8rem; }
+  }
+}

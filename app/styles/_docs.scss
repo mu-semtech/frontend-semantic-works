@@ -1,0 +1,323 @@
+@import 'variables';
+
+// ─── Rendered Markdown body (.md-body) ───────────────────────────────────────
+// marked.js renders into a <div class="md-body"> — no shadow DOM, full CSS
+// control. highlight.js handles code block syntax colouring.
+.md-body {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: $color-body;
+
+  // ── Headings ──────────────────────────────────────────────────────────────
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    color: $color-heading;
+    line-height: 1.25;
+    margin-top: 1.75em;
+    margin-bottom: 0.5em;
+
+    &:first-child { margin-top: 0; }
+  }
+
+  h1 { font-size: 2rem;    font-weight: 700; border-bottom: 1px solid $color-border; padding-bottom: 0.3em; }
+  h2 { font-size: 1.5rem;  font-weight: 700; border-bottom: 1px solid $color-border; padding-bottom: 0.25em; }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  h4 { font-size: 1rem;    font-weight: 600; }
+  h5 { font-size: 0.875rem; font-weight: 600; }
+  h6 { font-size: 0.875rem; font-weight: 600; color: $color-muted; }
+
+  // ── Paragraphs & spacing ──────────────────────────────────────────────────
+  p { margin: 0 0 1em; }
+
+  // ── Links ─────────────────────────────────────────────────────────────────
+  a {
+    color: $color-sky-dark;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { color: $color-sky; }
+  }
+
+  // ── Lists ─────────────────────────────────────────────────────────────────
+  ul, ol {
+    padding-left: 1.5em;
+    margin: 0 0 1em;
+  }
+  li { margin-bottom: 0.25em; }
+  li > ul, li > ol { margin-top: 0.25em; margin-bottom: 0; }
+
+  // ── Blockquote ────────────────────────────────────────────────────────────
+  blockquote {
+    margin: 0 0 1em;
+    padding: 0.75em 1em;
+    border-left: 3px solid $color-sky;
+    background: $color-sky-light;
+    border-radius: 0 $radius-sm $radius-sm 0;
+    color: $color-muted;
+
+    > p { margin: 0; }
+  }
+
+  // ── Inline code ───────────────────────────────────────────────────────────
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    font-size: 0.875em;
+    background: $color-sky-light;
+    color: $color-heading;
+    padding: 0.15em 0.4em;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+  }
+
+  // ── Code blocks (hljs renders pre > code.hljs) ────────────────────────────
+  pre {
+    margin: 0 0 1em;
+    border-radius: $radius-sm;
+    overflow-x: auto;
+    border: 1px solid $color-border;
+
+    code {
+      display: block;
+      padding: 1rem 1.25rem;
+      background: $color-sky-light;
+      border: none;
+      border-radius: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      white-space: pre;
+    }
+
+    // Ensure hljs color tokens still apply (github theme loaded in index.html)
+    code.hljs { background: $color-sky-light; }
+  }
+
+  // ── Horizontal rule ───────────────────────────────────────────────────────
+  hr {
+    border: none;
+    border-top: 1px solid $color-border;
+    margin: 2em 0;
+  }
+
+  // ── Tables ────────────────────────────────────────────────────────────────
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1em;
+    font-size: 0.9rem;
+  }
+
+  th {
+    font-family: $font-heading;
+    font-weight: 600;
+    background: $color-sky-light;
+    border-bottom: 2px solid $color-border;
+    text-align: left;
+    padding: 0.6em 0.75em;
+    color: $color-heading;
+  }
+
+  td {
+    padding: 0.55em 0.75em;
+    border-bottom: 1px solid $color-border;
+    vertical-align: top;
+  }
+
+  tbody tr:hover td { background: #f7fcff; }
+
+  // ── Images ────────────────────────────────────────────────────────────────
+  img {
+    max-width: 100%;
+    border-radius: $radius-sm;
+  }
+}
+
+// Loading error state
+.md-load-error {
+  color: $color-muted;
+  font-style: italic;
+}
+
+// ─── Shared Page Header (docs + tutorial) ────────────────────────────────────
+.sw-page-header {
+  background: linear-gradient(135deg, $color-sky-deeper 0%, $color-sky-dark 100%);
+  padding: $space-12 0 $space-10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sw-page-header-inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-px;
+}
+
+.sw-page-header-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: $space-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.sw-page-header h1 {
+  font-family: $font-heading;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: $space-3;
+  line-height: 1.15;
+}
+
+.sw-page-header p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 560px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+// ─── Docs Layout ─────────────────────────────────────────────────────────────
+.docs-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 64px - 200px); // viewport minus nav and footer
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-px;
+  gap: $space-8;
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 200px 1fr;
+    gap: $space-6;
+  }
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Docs Sidebar ─────────────────────────────────────────────────────────────
+.docs-sidebar {
+  padding: $space-8 0;
+  border-right: 1px solid $color-border;
+  position: sticky;
+  top: 64px; // nav height
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  // Custom scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: $color-border transparent;
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: $color-border; border-radius: 2px; }
+
+  @media (max-width: $bp-md) {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid $color-border;
+    padding: $space-4 0;
+    overflow: visible;
+  }
+}
+
+// Section headers in the nav tree (e.g. "Core", "Templates")
+.docs-nav-section {
+  display: block;
+  font-family: $font-heading;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-muted;
+  padding: $space-6 $space-4 $space-2 $space-6;
+  margin: 0;
+  line-height: 1.2;
+
+  // Top-level "Documentation" label — style it as a mini-eyebrow
+  &.docs-nav-level-0 {
+    color: $color-sky-dark;
+    font-size: 0.8rem;
+    padding-top: 0;
+    padding-bottom: $space-4;
+    letter-spacing: 0.04em;
+  }
+}
+
+// Clickable doc links
+.docs-nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: $space-2 $space-4 $space-2 $space-6;
+  font-family: $font-body;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $color-body;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  line-height: 1.5;
+  transition: color $transition-fast, border-color $transition-fast,
+              background-color $transition-fast;
+
+  &:hover {
+    color: $color-sky-dark;
+    background: $color-sky-light;
+    border-left-color: $color-sky;
+  }
+}
+
+// ─── Docs Content ─────────────────────────────────────────────────────────────
+.docs-content {
+  padding: $space-8 0 $space-16 $space-6;
+  min-width: 0; // prevent content from overflowing the grid
+
+  @media (max-width: $bp-md) {
+    padding: $space-8 0 $space-16;
+  }
+
+  .md-body { max-width: 720px; }
+}
+
+// ─── Tutorial Page ────────────────────────────────────────────────────────────
+.sw-tutorial-body {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $space-12 $container-px $space-20;
+
+  .md-body {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
+
+// ─── Doc/Tutorial back link ───────────────────────────────────────────────────
+.sw-page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-bottom: $space-4;
+  transition: color $transition-fast;
+
+  &::before { content: '←'; }
+  &:hover { color: rgba(255, 255, 255, 0.9); }
+}

@@ -4,10 +4,24 @@ import { action } from '@ember/object';
 import { htmlSafe } from '@ember/template';
 
 export default class DocumentationComponent extends Component {
-  @tracked currentDoc = htmlSafe("<zero-md src='https://raw.githubusercontent.com/mu-semtech/mu-project/master/README.md'></zero-md>");
+  @tracked currentDoc = null;
+
+  constructor(owner, args) {
+    super(owner, args);
+    this.changeDoc('https://raw.githubusercontent.com/mu-semtech/mu-project/master/README.md');
+  }
 
   @action
-  changeDoc(url){
-    this.currentDoc = htmlSafe("<zero-md src='"+url+"'></zero-md>");
+  async changeDoc(url) {
+    this.currentDoc = null;
+    try {
+      const resp = await fetch(url);
+      const md = await resp.text();
+      const html = window.marked.parse(md);
+      this.currentDoc = htmlSafe(`<div class="md-body">${html}</div>`);
+    } catch (e) {
+      console.error('[docs] Failed to render markdown:', e);
+      this.currentDoc = htmlSafe('<div class="md-body"><p class="md-load-error">Failed to load documentation.</p></div>');
+    }
   }
 }
