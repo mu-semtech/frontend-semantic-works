@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>semantic.works</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="/@embroider/virtual/vendor.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- highlight.js theme — color tokens only; typography overridden by .md-body in _docs.scss -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <!-- marked + highlight.js — available as window.marked / window.hljs for doc/tutorial rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      marked.use({
+        gfm: true,
+        renderer: {
+          code(tokenOrCode, infostring) {
+            const text = tokenOrCode && typeof tokenOrCode === 'object'
+              ? tokenOrCode.text
+              : tokenOrCode;
+            const lang = tokenOrCode && typeof tokenOrCode === 'object'
+              ? tokenOrCode.lang
+              : infostring;
+            if (!text) return '<pre><code></code></pre>';
+            const validLang = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
+            const highlighted = hljs.highlight(text, { language: validLang }).value;
+            return `<pre><code class="hljs language-${validLang}">${highlighted}</code></pre>`;
+          }
+        }
+      });
+    </script>
+
+    <script src="/@embroider/virtual/vendor.js"></script>
+    <script type="module" src="./app/app-boot.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

@@ -1,13 +1,12 @@
-FROM madnificent/ember:4.12.1 as builder
+FROM madnificent/ember:6.8.0 AS builder
 
 LABEL maintainer="aad@semantic.works"
 
 WORKDIR /app
-COPY package.json .
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-# RUN npx update-browserslist-db@latest
-RUN ember build -prod
+RUN npm run build
 
 FROM semtech/static-file-service:0.2.0
 
