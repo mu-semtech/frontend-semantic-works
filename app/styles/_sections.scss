@@ -133,8 +133,8 @@
   content: '';
   position: absolute;
   top: 28px; // center of the dot
-  left: calc(16.66% + 28px); // offset to start/end at dot centers
-  right: calc(16.66% + 28px);
+  left: calc(12.5% + 28px); // offset to start/end at dot centers
+  right: calc(12.5% + 28px);
   height: 2px;
   background: linear-gradient(90deg, $color-red, #f08080, $color-red);
   z-index: 0;

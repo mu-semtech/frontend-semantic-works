@@ -1,6 +1,6 @@
-// -- Color Palette// Sky blue    = open sky, sovereignty,
- freedom
-// Passionate red  = fight for the open web
+// -- Color Palette
+// Sky blue           = open sky, sovereignty, freedom
+// Passionate red     = fight for the open web
 // Linked-data purple = semantic web, RDF, knowledge graphs (W3C heritage)
 $color-sky:         #0ea5e9;
 $color-sky-dark:    #0369a1;
@@ -20,13 +20,13 @@ $color-muted:       #64748b;
 $color-border:      #e2e8f0;
 $color-surface:     #ffffff;
 
-// -- Typography$font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont,
- sans-serif;
+// -- Typography
+$font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-body:    'Lexend Deca', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 
-// -- Spacing$space-1: 0
-.25rem;
+// -- Spacing
+$space-1: 0.25rem;
 $space-2: 0.5rem;
 $space-3: 0.75rem;
 $space-4: 1rem;
@@ -38,31 +38,31 @@ $space-16: 4rem;
 $space-20: 5rem;
 $space-24: 6rem;
 
-// -- Layout$container-max:
- 1152px;
+// -- Layout
+$container-max: 1152px;
 $container-px:  1.5rem;
 $section-py:    6.5rem;   // generous vertical breathing room
 
-// -- Breakpoints$bp-sm: 
- 640px;
+// -- Breakpoints
+$bp-sm:  640px;
 $bp-md:  768px;
 $bp-lg:  1024px;
 $bp-xl:  1280px;
 
-// -- Transitions$transition-fast:   0
-.15s ease;
+// -- Transitions
+$transition-fast:   0.15s ease;
 $transition-base:   0.25s ease;
 $transition-slow:   0.4s ease;
 
-// -- Border Radius$radius-sm:   0
-.375rem;
+// -- Border Radius
+$radius-sm:   0.375rem;
 $radius-md:   0.625rem;
 $radius-lg:   1rem;
 $radius-xl:   1.5rem;
 $radius-full: 9999px;
 
-// -- Shadows$shadow-sm:    0 1px 3px rgba(15, 23, 42, 0
-.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+// -- Shadows
+$shadow-sm:    0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
 $shadow-md:    0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
 $shadow-lg:    0 12px 32px rgba(15, 23, 42, 0.1), 0 4px 8px rgba(15, 23, 42, 0.06);
 $shadow-sky:   0 4px 16px rgba(14, 165, 233, 0.2);
