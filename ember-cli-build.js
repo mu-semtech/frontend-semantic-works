@@ -4,9 +4,6 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    codemirror: {
-      modes: ['javascript', 'ruby']
-    }
     // Add options here
   });
 
