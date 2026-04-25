@@ -18,6 +18,8 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/runtime": "^7.23.0",
     "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",

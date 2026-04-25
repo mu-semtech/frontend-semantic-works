@@ -1,9 +1,9 @@
-@import 'variables';
-@import 'typography';
-@import 'layout';
-@import 'components';
-@import 'nav';
-@import 'footer';
-@import 'hero';
-@import 'sections';
-@import 'docs';
+@use 'variables' as *;
+@use 'typography';
+@use 'layout';
+@use 'components';
+@use 'nav';
+@use 'footer';
+@use 'hero';
+@use 'sections';
+@use 'docs';
