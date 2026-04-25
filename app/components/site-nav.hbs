@@ -1,0 +1,28 @@
+<nav class="sw-nav">
+  <div class="sw-nav-inner">
+    <LinkTo @route="index" class="sw-nav-brand">
+      <img src="assets/images/mu-man-redraw.svg" class="sw-nav-logo" alt="" aria-hidden="true">
+      <span class="sw-nav-name">semantic<span class="sw-nav-dot">·</span>works</span>
+    </LinkTo>
+
+    <button
+      type="button"
+      class="sw-nav-hamburger {{if this.isOpen 'is-open'}}"
+      aria-label="Toggle navigation"
+      aria-expanded={{if this.isOpen "true" "false"}}
+      {{on "click" this.toggle}}
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="sw-nav-links {{if this.isOpen 'is-open'}}">
+      <LinkTo @route="docs" {{on "click" this.close}}>Documentation</LinkTo>
+      <span class="sw-nav-sep">·</span>
+      <LinkTo @route="tutorial" {{on "click" this.close}}>Tutorial</LinkTo>
+      <span class="sw-nav-sep">·</span>
+      <a href="https://github.com/mu-semtech/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</nav>

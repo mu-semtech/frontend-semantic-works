@@ -142,22 +142,19 @@
   border-radius: $radius-lg;
   overflow: hidden;
   box-shadow: $shadow-lg;
+  max-width: 100%;
 
   .terminal-chrome {
     display: flex;
     align-items: center;
-    gap: $space-2;
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 1rem;
     background: rgba(0, 0, 0, 0.2);
 
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: $radius-full;
+    .terminal-label {
+      font-family: $font-mono;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
     }
-    .dot-red    { background: #ff5f57; }
-    .dot-yellow { background: #febc2e; }
-    .dot-green  { background: #28c840; }
   }
 
   .terminal-body {
@@ -176,7 +173,7 @@
       user-select: none;
     }
     .comment {
-      color: #64748b;
+      color: rgba(255, 255, 255, 0.55);
     }
   }
 }

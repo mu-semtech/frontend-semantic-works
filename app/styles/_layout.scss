@@ -1,5 +1,10 @@
 @import 'variables';
 
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 .sw-container {
   max-width: $container-max;
   margin-left: auto;

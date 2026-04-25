@@ -39,12 +39,12 @@
       <span class="sw-eyebrow">Open source · EU sovereign · Since 2013</span>
       <h1>Microservices fuelled by <em>Linked Data</em>.</h1>
       <p class="sw-hero-subtitle">
-        A transitional architecture that walks you from monolith to sovereign, distributed data
-        — without a big bang rewrite. Built on HTTP, JSON:API, SPARQL, and Docker.
-        Easy path forward. Escape hatches where you need them.
+        Here is the stack where your data stays yours, your code stays yours, and
+        it keeps running for years to come. Built on open standards — HTTP, JSON:API,
+        SPARQL, Docker — well-researched and owned by all of us.
       </p>
       <div class="sw-hero-ctas">
-        <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Get Started →</LinkTo>
+        <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Start building →</LinkTo>
         <LinkTo @route="docs" class="sw-btn sw-btn--secondary">Explore the docs</LinkTo>
       </div>
     </div>
@@ -108,13 +108,11 @@
       <div class="sw-hero-terminal">
         <div class="sw-terminal">
           <div class="terminal-chrome">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
+            <span class="terminal-label">create a new project</span>
           </div>
           <pre class="terminal-body"><span class="cmd">$</span> mu project new my-app
 <span class="cmd">$</span> cd my-app
-<span class="cmd">$</span> docker-compose up
+<span class="cmd">$</span> docker compose up
 <span class="comment"># Your semantic backend is running.</span></pre>
         </div>
       </div>
@@ -145,7 +143,7 @@
       </div>
     </div>
     <p class="sw-proof-note">
-      First presented at USEWOD 2015 · Deployed in Belgian public services · Multiple conference talks
+      First presented at USEWOD 2015 · Kaleidos, LBLOD, European Commission, and more in production · Presented at ISWC, ESWC, Semantics, OpenBelgium
     </p>
   </div>
 </section>
@@ -153,10 +151,11 @@
 {{! ─── Standards Foundation ───────────────────────────────────────────── }}
 <section class="sw-section sw-standards">
   <div class="sw-container">
-    <h2 class="sw-section-title">Built on what the web already trusts.</h2>
+    <h2 class="sw-section-title">Built on what no platform can take away.</h2>
     <p class="sw-section-subtitle">
-      No proprietary protocols. No exotic dependencies. semantic.works is the glue
-      that connects open standards into a coherent, productive architecture.
+      HTTP, JSON:API, SPARQL, Docker. Open standards owned by no single company,
+      usable by everyone. We've seen what happens when a platform owns the protocol —
+      it works until it doesn't. These ones, nobody owns.
     </p>
     <div class="sw-standards-grid">
       <div class="sw-card sw-card--sky sw-standard-card">
@@ -181,7 +180,7 @@
       </div>
     </div>
     <p class="sw-section-note">
-      No lock-in. Your data stays yours. Your stack is yours.
+      Any language. Any tool. Any team. Nothing here asks for loyalty — because nothing here can be taken away.
     </p>
   </div>
 </section>
@@ -189,10 +188,11 @@
 {{! ─── The Journey ────────────────────────────────────────────────────── }}
 <section class="sw-section sw-section--sky sw-journey">
   <div class="sw-container">
-    <h2 class="sw-section-title">Meet your architecture where it is.</h2>
+    <h2 class="sw-section-title">A transitional architecture.</h2>
     <p class="sw-section-subtitle">
-      You don't have to throw everything away. semantic.works is a transitional architecture —
-      it walks alongside you, step by step, toward data that is sovereign, linked, and alive.
+      Most teams start with a monolith. semantic.works takes you to the next step —
+      microservices with a shared semantic model — and gradually from there into
+      fully distributed applications. No big bang rewrite. Each step stands on its own.
     </p>
 
     <div class="sw-journey-steps">
@@ -214,17 +214,18 @@
     </div>
 
     <p class="sw-journey-note">
-      40+ applications in production across governments, public services, and enterprises
-      have walked this path with semantic.works.
+      40+ applications in production. Governments, public services, enterprises, and
+      researchers have walked this path — and their data is still theirs.
     </p>
 
     <div class="sw-contributors">
-      <span class="sw-contributors-label">Built with and by</span>
-      <span class="sw-contributor">Sirus</span>
-      <span class="sw-contributor">Inuits</span>
-      <span class="sw-contributor">redpencil.io</span>
-      <span class="sw-contributor">Faros</span>
-      <span class="sw-contributor">and others</span>
+      <span class="sw-contributors-label">In production</span>
+      <span class="sw-contributor">Kaleidos</span>
+      <span class="sw-contributor">LBLOD</span>
+      <span class="sw-contributor">Veeakker.be</span>
+      <span class="sw-contributor">YourDataStories</span>
+      <span class="sw-contributor">Big Data Europe</span>
+      <span class="sw-contributor">ESCO · European Commission</span>
     </div>
   </div>
 </section>
@@ -233,10 +234,11 @@
 <section class="sw-section">
   <div class="sw-container">
     <div class="sw-pillars-intro">
-      <h2 class="sw-section-title">The backbone. Five services, everything you need to start.</h2>
+      <h2 class="sw-section-title">One command. The hard problems are already solved.</h2>
       <p class="sw-section-subtitle">
-        These are the load-bearing walls. Together they give you routing, a semantic data model,
-        security, and a triplestore — from a single <code>docker-compose up</code>.
+        <code>docker-compose up</code> and you have routing, sessions, a full JSON:API,
+        security, and a triplestore. Weeks of infrastructure work — already built,
+        already working. Now write the thing only you can write.
       </p>
     </div>
     <div class="sw-pillars-grid">
@@ -268,7 +270,7 @@
         <div class="sw-card-icon">🔒</div>
         <div class="sw-card-title">sparql-parser</div>
         <p class="sw-card-body">
-          The security layer. Access rights expressed in SPARQL — transparent, auditable, powerful.
+          Security lives in one place: the database. Every service sees only what the user is allowed to see — automatically, without any service needing to implement it.
         </p>
         <a href="https://github.com/mu-semtech/sparql-parser" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
       </div>
@@ -278,7 +280,7 @@
         <p class="sw-card-body">
           The triplestore where your linked data lives. Proven, performant, standards-compliant.
         </p>
-        <a href="https://github.com/openlink/virtuoso-opensource" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
+        <a href="https://github.com/redpencilio/docker-virtuoso" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
       </div>
     </div>
   </div>
@@ -327,7 +329,7 @@
         <div class="sw-service-dot"></div>
         <div>
           <p class="sw-service-name">Push updates</p>
-          <p class="sw-service-desc">When data changes, your frontend knows immediately. No polling. No stale state.</p>
+          <p class="sw-service-desc">Long-running job? Create a task, let the frontend watch it live — about 10 lines of frontend code. No WebSocket server. No polling loop. We handle the transport.</p>
         </div>
       </div>
       <div class="sw-service-item">
@@ -348,7 +350,21 @@
         <div class="sw-service-dot"></div>
         <div>
           <p class="sw-service-name">mu-python-template</p>
-          <p class="sw-service-desc">The same, in Python. One command, a running service with semantic superpowers.</p>
+          <p class="sw-service-desc">The same, in Python. One command, a running service with access rights handled automatically.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">mu-cli</p>
+          <p class="sw-service-desc">Maintenance scripts that ship with your application — add an admin user, reset an index. Each command runs in a sandbox: even a compromised dependency can't touch anything outside the project.</p>
+        </div>
+      </div>
+      <div class="sw-service-item">
+        <div class="sw-service-dot"></div>
+        <div>
+          <p class="sw-service-name">Audit trail</p>
+          <p class="sw-service-desc">Every call through the stack traced back to the session that initiated it. Stored in Elasticsearch, visualised in Kibana. Encrypted on disk — recoverable with a GPG key you keep offline.</p>
         </div>
       </div>
     </div>
@@ -362,22 +378,23 @@
 {{! ─── Governance ─────────────────────────────────────────────────────── }}
 <section class="sw-section sw-governance">
   <div class="sw-container">
-    <h2 class="sw-section-title">An easy path. With guardrails.</h2>
+    <h2 class="sw-section-title">A stable platform to build on.</h2>
     <div class="sw-governance-body">
       <p>
-        A steering team oversees the evolution of the framework. Things change — the web changes —
-        but never in ways that pull the rug from under what you built yesterday.
-        Convention gives you speed. Escape hatches give you freedom.
-        This stack is designed to last as long as your application.
+        Quality software needs a stable foundation — not a new paradigm every few months.
+        semantic.works evolves gradually, steered by a core team with decades of experience
+        and shaped by a broad community.
       </p>
       <p>
-        semantic.works is not a product with a roadmap driven by a single vendor.
-        It is a framework shaped by the teams who build on it — an act of collective
-        investment in an open web that remains open.
+        The features are orthogonal by design — logging, authorization, and caching work
+        without your services knowing about them. One consistent mental model, from your
+        first service to your fiftieth. When the framework evolves, the path forward is
+        always visible from where you are. And if we ever stop, MIT means it's yours —
+        to use, to fork, to carry forward.
       </p>
     </div>
     <div class="sw-governance-pillars">
-      <span class="sw-gov-pill">Backwards compatible evolution</span>
+      <span class="sw-gov-pill">Gradual, careful evolution</span>
       <span class="sw-gov-pill">Multi-actor steering</span>
       <span class="sw-gov-pill">No single-vendor lock-in</span>
       <span class="sw-gov-pill">EU digital sovereignty</span>
@@ -404,15 +421,13 @@
     <div>
       <div class="sw-terminal">
         <div class="terminal-chrome">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
+          <span class="terminal-label">~/mu-project</span>
         </div>
         <pre class="terminal-body"><span class="cmd">$</span> mu project new my-app
 
 <span class="cmd">$</span> cd my-app
 
-<span class="cmd">$</span> docker-compose up
+<span class="cmd">$</span> docker compose up
 <span class="comment"># Pulling images...
 # Starting triplestore, identifier,
 # dispatcher, resources...
@@ -427,20 +442,13 @@
   <div class="sw-community-inner">
     <h2 class="sw-section-title">Built by many. Owned by none.</h2>
     <p class="sw-section-subtitle">
-      semantic.works is a community project. Multiple organisations and individuals
-      build with it, contribute to it, and depend on it in production.
-      There is no single company that can take it away.
+      Multiple organisations build with it, contribute to it, and depend on it in
+      production. A steering team guides its evolution — carefully, without breaking
+      what you built. Things land when they're right.
     </p>
-    <div class="sw-community-companies">
-      <span class="sw-company">Sirus</span>
-      <span class="sw-company">Inuits</span>
-      <span class="sw-company">redpencil.io</span>
-      <span class="sw-company">Faros</span>
-    </div>
     <p class="sw-community-note">
-      Want to contribute? The framework is open source and welcomes new services,
-      templates, and ideas. Start on
-      <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      The framework is open source and welcomes new services, templates, and ideas.
+      Start on <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">GitHub →</a>
     </p>
     <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer" class="sw-community-open">
       View the mu-semtech organisation on GitHub

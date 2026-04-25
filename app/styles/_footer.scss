@@ -11,7 +11,7 @@
   margin: 0 auto;
   padding: 0 $container-px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1.5fr;
   gap: $space-12;
 
   @media (max-width: $bp-md) {
@@ -72,7 +72,25 @@
     &:hover { color: #ffffff; }
   }
 
-  .ember-view { display: contents; }
+  .ember-view {
+    display: block;
+    margin-bottom: $space-3;
+
+    a { margin-bottom: 0; }
+  }
+}
+
+.sw-footer-links-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-2;
+}
+
+.sw-footer-sep {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  user-select: none;
 }
 
 .sw-footer-bottom {

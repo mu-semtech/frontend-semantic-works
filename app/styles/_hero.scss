@@ -19,6 +19,8 @@
   position: relative;
   z-index: 1;
 
+  > * { min-width: 0; }
+
   @media (max-width: $bp-lg) {
     grid-template-columns: 1fr;
     gap: $space-12;
@@ -190,30 +192,43 @@
   overflow: hidden;
 }
 
+@keyframes graph-drift {
+  0%   { transform: translate(0px,   0px);  }
+  20%  { transform: translate(7px,  -9px);  }
+  45%  { transform: translate(-5px,  6px);  }
+  70%  { transform: translate(9px,   4px);  }
+  100% { transform: translate(0px,   0px);  }
+}
+
 .sw-hero-graph-svg {
   position: absolute;
-  right: -2%;
+  left: 45%;
+  right: -5%;
   top: 0;
-  width: 60%;
   height: 100%;
+  width: auto;
+  animation: graph-drift 28s ease-in-out infinite;
 }
 
 .sw-bg-edge {
-  stroke: rgba(75, 0, 120, 0.09);
+  stroke: rgba(75, 0, 120, 0.06);
   stroke-width: 1;
   fill: none;
 }
 
 @keyframes bg-node-glow {
-  0%, 100% { opacity: 0.32; }
-  50%       { opacity: 0.82; }
+  0%, 100% { opacity: 0.28; }
+  50%       { opacity: 0.72; }
 }
 
 .sw-bg-node {
   animation: bg-node-glow 3.8s ease-in-out infinite;
+  // Light halo covers the edge line passing through each node
+  stroke: rgba(240, 249, 255, 0.88);
+  stroke-width: 3.5;
 
-  &--graph { fill: rgba(75, 0, 120, 0.22); }
-  &--sky   { fill: rgba(14, 165, 233, 0.16); }
+  &--graph { fill: rgba(75, 0, 120, 0.32); }
+  &--sky   { fill: rgba(14, 165, 233, 0.22); }
 }
 
 // Stagger each background node independently so they don't all pulse at once

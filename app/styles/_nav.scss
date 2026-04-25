@@ -7,6 +7,8 @@
   background: $color-sky-dark;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 1px 12px rgba(3, 105, 161, 0.3);
+  // Needed for the mobile dropdown to position against the nav bar
+  @media (max-width: $bp-md) { position: relative; }
 }
 
 .sw-nav-inner {
@@ -61,7 +63,6 @@
     text-decoration: none;
     transition: color $transition-fast;
     letter-spacing: 0.01em;
-
     &:hover { color: #ffffff; }
   }
 
@@ -77,12 +78,75 @@
   display: contents;
 }
 
-@media (max-width: $bp-md) {
-  .sw-nav-links {
-    gap: $space-4;
+.sw-nav-sep {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+  user-select: none;
+}
 
-    a {
-      font-size: 0.85rem;
+// ─── Hamburger button ─────────────────────────────────────────────────────────
+.sw-nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 2px;
+    transition: transform $transition-fast, opacity $transition-fast;
+  }
+
+  &.is-open {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: $bp-md) {
+  .sw-nav-hamburger {
+    display: flex;
+  }
+
+  .sw-nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: $color-sky-dark;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: $space-4 $container-px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    &.is-open { display: flex; }
+
+    .sw-nav-sep { display: none; }
+
+    // Restore block layout so each link gets its own row
+    .ember-view { display: block; }
+
+    a, .ember-view {
+      font-size: 1rem;
+      padding: $space-3 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      &:hover { color: #ffffff; }
     }
   }
 }
@@ -90,9 +154,4 @@
 @media (max-width: 480px) {
   .sw-nav-logo { height: 28px; }
   .sw-nav-name { font-size: 1rem; }
-
-  .sw-nav-links {
-    gap: $space-3;
-    a { font-size: 0.8rem; }
-  }
 }

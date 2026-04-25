@@ -360,7 +360,17 @@
 // ─── Getting Started ──────────────────────────────────────────────────────────
 .sw-start {
   .sw-section-title { color: #ffffff; }
-  .sw-section-subtitle { color: rgba(255, 255, 255, 0.75); }
+  .sw-section-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+
+    a {
+      color: $color-sky;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      &:hover { color: #ffffff; }
+    }
+  }
 }
 
 .sw-start-inner {
@@ -371,6 +381,9 @@
   grid-template-columns: 1fr 1fr;
   gap: $space-16;
   align-items: center;
+
+  // Prevent grid children from overflowing their track on narrow screens
+  > * { min-width: 0; }
 
   @media (max-width: $bp-lg) {
     grid-template-columns: 1fr;
@@ -386,6 +399,7 @@
     margin-top: $space-8;
   }
 }
+
 
 // ─── Community ────────────────────────────────────────────────────────────────
 .sw-community {
