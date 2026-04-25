@@ -84,7 +84,7 @@
   user-select: none;
 }
 
-// ─── Hamburger button ─────────────────────────────────────────────────────────
+// -- Hamburger button
 .sw-nav-hamburger {
   display: none;
   flex-direction: column;
@@ -113,7 +113,7 @@
   }
 }
 
-// ─── Responsive ───────────────────────────────────────────────────────────────
+// -- Responsive
 @media (max-width: $bp-md) {
   .sw-nav-hamburger {
     display: flex;

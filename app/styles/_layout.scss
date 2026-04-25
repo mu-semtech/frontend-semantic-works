@@ -30,7 +30,7 @@ html, body {
   p { color: rgba(255, 255, 255, 0.8); }
 }
 
-// Subtle purple-to-sky gradient — used for graph/semantic-focused sections
+// Subtle purple-to-sky gradient - used for graph/semantic-focused sections
 .sw-section--graph {
   background: linear-gradient(160deg, $color-graph-light 0%, $color-sky-light 55%, #ffffff 100%);
 }

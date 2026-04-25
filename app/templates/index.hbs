@@ -1,7 +1,7 @@
-{{! ─── Hero ─────────────────────────────────────────────────────────── }}
+{{! Hero }}
 <section class="sw-hero">
 
-  {{! Background graph — ghost nodes and edges, linked-data glitter }}
+  {{! Background graph: ghost nodes and edges, linked-data glitter }}
   <div class="sw-hero-graph" aria-hidden="true">
     <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" class="sw-hero-graph-svg" preserveAspectRatio="xMidYMid slice">
       {{! Edges }}
@@ -40,8 +40,8 @@
       <h1>Microservices fuelled by <em>Linked Data</em>.</h1>
       <p class="sw-hero-subtitle">
         Here is the stack where your data stays yours, your code stays yours, and
-        it keeps running for years to come. Built on open standards — HTTP, JSON:API,
-        SPARQL, Docker — well-researched and owned by all of us.
+        it keeps running for years to come. Built on open standards: HTTP, JSON:API,
+        SPARQL, Docker. Well-researched and owned by all of us.
       </p>
       <div class="sw-hero-ctas">
         <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Start building →</LinkTo>
@@ -51,8 +51,8 @@
 
     <div class="sw-hero-visual">
       <div class="sw-kite-wrap">
-        {{! Inline SVG — the mu-man kite. Nodes pulse to signal the graph coming alive. }}
-        <svg viewBox="10 55 195 180" xmlns="http://www.w3.org/2000/svg" class="sw-kite" role="img" aria-label="The mu-man: a kite whose nodes form a graph — connect them and a face appears">
+        {{! Inline SVG: the mu-man kite. Nodes pulse to signal the graph coming alive. }}
+        <svg viewBox="10 55 195 180" xmlns="http://www.w3.org/2000/svg" class="sw-kite" role="img" aria-label="The mu-man: a kite whose nodes form a graph. Connect them and a face appears.">
           <defs>
             <clipPath id="kite-eye-left">
               <path d="m 53.600263,122.03382 c 17.494821,-1.36833 35.06552,-1.72434 52.487067,-1.92025 -17.433387,3.80104 -34.737865,8.23678 -50.9286,15.47339 0.631007,-4.35803 0.254759,-9.04697 -1.558467,-13.55314 z" />
@@ -94,7 +94,7 @@
           <path class="sw-kite-edge" d="m 144.80973,175.00779 -4.1939,4.48138" />
           <path class="sw-kite-edge" d="m 78.609782,193.48149 2.15652,2.67579" />
 
-          {{! Graph nodes — these pulse to life, connecting to reveal the face }}
+          {{! Graph nodes: pulse to life, connecting to reveal the face }}
           <circle class="sw-node sw-node-red" id="node-1" cx="26.460918" cy="95.923607" r="4.7483106" />
           <circle class="sw-node sw-node-red" id="node-2" cx="116.25047"  cy="70.471619" r="4.7483106" />
           <circle class="sw-node sw-node-red" id="node-3" cx="185.12976"  cy="97.612762" r="4.7483106" />
@@ -121,7 +121,7 @@
   </div>
 </section>
 
-{{! ─── Social Proof Strip ─────────────────────────────────────────────── }}
+{{! Social Proof Strip }}
 <section class="sw-proof">
   <div class="sw-proof-inner">
     <div class="sw-proof-stats">
@@ -148,14 +148,13 @@
   </div>
 </section>
 
-{{! ─── Standards Foundation ───────────────────────────────────────────── }}
+{{! Standards Foundation }}
 <section class="sw-section sw-standards">
   <div class="sw-container">
     <h2 class="sw-section-title">Built on what no platform can take away.</h2>
     <p class="sw-section-subtitle">
       HTTP, JSON:API, SPARQL, Docker. Open standards owned by no single company,
-      usable by everyone. We've seen what happens when a platform owns the protocol —
-      it works until it doesn't. These ones, nobody owns.
+      usable by everyone. We've seen what happens when a platform owns the protocol: it works until it doesn't. These ones, nobody owns.
     </p>
     <div class="sw-standards-grid">
       <div class="sw-card sw-card--sky sw-standard-card">
@@ -180,18 +179,18 @@
       </div>
     </div>
     <p class="sw-section-note">
-      Any language. Any tool. Any team. Nothing here asks for loyalty — because nothing here can be taken away.
+      Any language. Any tool. Any team. Nothing here asks for loyalty, because nothing here can be taken away.
     </p>
   </div>
 </section>
 
-{{! ─── The Journey ────────────────────────────────────────────────────── }}
+{{! The Journey }}
 <section class="sw-section sw-section--sky sw-journey">
   <div class="sw-container">
     <h2 class="sw-section-title">A transitional architecture.</h2>
     <p class="sw-section-subtitle">
-      Most teams start with a monolith. semantic.works takes you to the next step —
-      microservices with a shared semantic model — and gradually from there into
+      Most teams start with a monolith. semantic.works takes you to the next step:
+      microservices with a shared semantic model, and gradually from there into
       fully distributed applications. No big bang rewrite. Each step stands on its own.
     </p>
 
@@ -215,7 +214,7 @@
 
     <p class="sw-journey-note">
       40+ applications in production. Governments, public services, enterprises, and
-      researchers have walked this path — and their data is still theirs.
+      researchers have walked this path, and their data is still theirs.
     </p>
 
     <div class="sw-contributors">
@@ -230,15 +229,15 @@
   </div>
 </section>
 
-{{! ─── The Five Pillars ───────────────────────────────────────────────── }}
+{{! The Five Pillars }}
 <section class="sw-section">
   <div class="sw-container">
     <div class="sw-pillars-intro">
       <h2 class="sw-section-title">One command. The hard problems are already solved.</h2>
       <p class="sw-section-subtitle">
         <code>docker-compose up</code> and you have routing, sessions, a full JSON:API,
-        security, and a triplestore. Weeks of infrastructure work — already built,
-        already working. Now write the thing only you can write.
+        security, and a triplestore. Weeks of infrastructure work, already built
+        and working. Now write the thing only you can write.
       </p>
     </div>
     <div class="sw-pillars-grid">
@@ -246,7 +245,7 @@
         <div class="sw-card-icon">id</div>
         <div class="sw-card-title">identifier</div>
         <p class="sw-card-body">
-          Every request gets a session. The entry point that makes your architecture coherent.
+          Every request gets a session and call identifier. Allows following logged in users and their calls.
         </p>
         <a href="https://github.com/mu-semtech/mu-identifier" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
       </div>
@@ -270,7 +269,7 @@
         <div class="sw-card-icon">🔒</div>
         <div class="sw-card-title">sparql-parser</div>
         <p class="sw-card-body">
-          Security lives in one place: the database. Every service sees only what the user is allowed to see — automatically, without any service needing to implement it.
+          Security lives in one place: a layer around the database. Every service sees only what the user is allowed to see, automatically, without any special implementation.
         </p>
         <a href="https://github.com/mu-semtech/sparql-parser" target="_blank" rel="noopener noreferrer" class="sw-card-link">View on GitHub</a>
       </div>
@@ -286,7 +285,7 @@
   </div>
 </section>
 
-{{! ─── Out of the Box ─────────────────────────────────────────────────── }}
+{{! Out of the Box }}
 <section class="sw-section sw-section--sky">
   <div class="sw-container">
     <div class="sw-services-intro">
@@ -314,8 +313,8 @@
       <div class="sw-service-item">
         <div class="sw-service-dot"></div>
         <div>
-          <p class="sw-service-name">mu-search</p>
-          <p class="sw-service-desc">Full-text search over your graph, powered by ElasticSearch. Index what you need, search the rest.</p>
+          <p class="sw-service-name">Full text searh</p>
+          <p class="sw-service-desc">Rich search over the data, powered by ElasticSearch. Index what you need, automatically update indexes and handle with access rights.</p>
         </div>
       </div>
       <div class="sw-service-item">
@@ -329,14 +328,14 @@
         <div class="sw-service-dot"></div>
         <div>
           <p class="sw-service-name">Push updates</p>
-          <p class="sw-service-desc">Long-running job? Create a task, let the frontend watch it live — about 10 lines of frontend code. No WebSocket server. No polling loop. We handle the transport.</p>
+          <p class="sw-service-desc">Long-running job? Create a task, let the frontend watch it live. About 10 lines of frontend code. We handle the transport.</p>
         </div>
       </div>
       <div class="sw-service-item">
         <div class="sw-service-dot"></div>
         <div>
           <p class="sw-service-name">mu-cl-resources</p>
-          <p class="sw-service-desc">Any entity — products, people, documents — listed, created, and updated via JSON:API. Zero code.</p>
+          <p class="sw-service-desc">Products, people, documents: listed, created, and updated via JSON:API. Zero code.</p>
         </div>
       </div>
       <div class="sw-service-item">
@@ -357,39 +356,39 @@
         <div class="sw-service-dot"></div>
         <div>
           <p class="sw-service-name">mu-cli</p>
-          <p class="sw-service-desc">Maintenance scripts that ship with your application — add an admin user, reset an index. Each command runs in a sandbox: even a compromised dependency can't touch anything outside the project.</p>
+          <p class="sw-service-desc">Maintenance scripts that ship with your application: add an admin user, reset an index. Each command runs in a sandbox, so even a compromised dependency can't touch anything outside the project.</p>
         </div>
       </div>
       <div class="sw-service-item">
         <div class="sw-service-dot"></div>
         <div>
-          <p class="sw-service-name">Audit trail</p>
-          <p class="sw-service-desc">Every call through the stack traced back to the session that initiated it. Stored in Elasticsearch, visualised in Kibana. Encrypted on disk — recoverable with a GPG key you keep offline.</p>
+          <p class="sw-service-name">app-http-logger</p>
+          <p class="sw-service-desc">Every call through the stack traced back to the session that initiated it. Stored in Elasticsearch, visualised in Kibana. Encrypted on disk, recoverable with a GPG key you keep offline.</p>
         </div>
       </div>
     </div>
     <p class="sw-services-more">
       And <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">200+ community repositories</a>
-      on GitHub — services, templates, and tooling built by the community.
+      on GitHub: services, templates, and tooling built by the community.
     </p>
   </div>
 </section>
 
-{{! ─── Governance ─────────────────────────────────────────────────────── }}
+{{! Governance }}
 <section class="sw-section sw-governance">
   <div class="sw-container">
     <h2 class="sw-section-title">A stable platform to build on.</h2>
     <div class="sw-governance-body">
       <p>
-        Quality software needs a stable foundation — not a new paradigm every few months.
+        Quality software needs a stable foundation, not a new paradigm every few months.
         semantic.works evolves gradually, steered by a core team with decades of experience
         and shaped by a broad community.
       </p>
       <p>
-        The features are orthogonal by design — logging, authorization, and caching work
+        The features are orthogonal by design: logging, authorization, and caching work
         without your services knowing about them. One consistent mental model, from your
         first service to your fiftieth. When the framework evolves, the path forward is
-        always visible from where you are. And if we ever stop, MIT means it's yours —
+        always visible from where you are. And if we ever stop, MIT means it's yours:
         to use, to fork, to carry forward.
       </p>
     </div>
@@ -403,7 +402,7 @@
   </div>
 </section>
 
-{{! ─── Getting Started ────────────────────────────────────────────────── }}
+{{! Getting Started }}
 <section class="sw-section sw-section--dark sw-start">
   <div class="sw-start-inner">
     <div class="sw-start-text">
@@ -411,7 +410,7 @@
       <p class="sw-section-subtitle">
         Install <a href="https://github.com/mu-semtech/mu-cli" target="_blank" rel="noopener noreferrer">mu-cli</a>,
         scaffold a new project, and start Docker. You have a working semantic backend
-        with a triplestore, routing, resources, and security — ready to build on.
+        with a triplestore, routing, resources, and security, ready to build on.
       </p>
       <div class="sw-start-ctas">
         <LinkTo @route="tutorial" class="sw-btn sw-btn--primary">Follow the tutorial →</LinkTo>
@@ -437,13 +436,13 @@
   </div>
 </section>
 
-{{! ─── Community ──────────────────────────────────────────────────────── }}
+{{! Community }}
 <section class="sw-section sw-community">
   <div class="sw-community-inner">
     <h2 class="sw-section-title">Built by many. Owned by none.</h2>
     <p class="sw-section-subtitle">
       Multiple organisations build with it, contribute to it, and depend on it in
-      production. A steering team guides its evolution — carefully, without breaking
+      production. A steering team guides its evolution, carefully, without breaking
       what you built. Things land when they're right.
     </p>
     <p class="sw-community-note">

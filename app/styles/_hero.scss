@@ -1,6 +1,6 @@
 @import 'variables';
 
-// ─── Hero Section ─────────────────────────────────────────────────────────────
+// -- Hero Section
 .sw-hero {
   background: linear-gradient(160deg, $color-sky-light 0%, #ffffff 65%);
   padding: $space-24 0 $space-20;
@@ -27,7 +27,7 @@
   }
 }
 
-// ── Left column ────────────────────────────────────────────────────────────────
+// -- Left column
 .sw-hero-text {
   .sw-eyebrow {
     display: inline-flex;
@@ -76,7 +76,7 @@
   align-items: center;
 }
 
-// ── Right column ───────────────────────────────────────────────────────────────
+// -- Right column
 .sw-hero-visual {
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@
   }
 }
 
-// ─── The Kite SVG ─────────────────────────────────────────────────────────────
+// -- The Kite SVG
 .sw-kite-wrap {
   width: 100%;
   max-width: 320px;
@@ -137,7 +137,7 @@
     stroke: none;
   }
 
-  // Graph nodes (dots) — base style
+  // Graph nodes (dots) - base style
   .sw-node {
     stroke: #1e293b;
     stroke-width: 0.79375;
@@ -147,7 +147,7 @@
   .sw-node-sky  { fill: $color-sky; }
 }
 
-// ─── Node pulse animation ─────────────────────────────────────────────────────
+// -- Node pulse animation
 @keyframes node-pulse {
   0%, 100% { opacity: 0.55; }
   50%       { opacity: 1; }
@@ -175,15 +175,15 @@
 #node-6 { animation-delay: 1.6s;    color: $color-sky; }
 #node-7 { animation-delay: 1.92s;   color: $color-sky; }
 
-// ─── Hero terminal ────────────────────────────────────────────────────────────
+// -- Hero terminal
 .sw-hero-terminal {
   width: 100%;
   max-width: 420px;
 }
 
-// ─── Background graph decoration ─────────────────────────────────────────────
+// -- Background graph decoration
 // A ghost graph of linked-data nodes and edges sits behind the hero content.
-// Purple + sky, very low opacity, pulsing asynchronously — graph glitter.
+// Purple + sky, very low opacity, pulsing asynchronously - graph glitter.
 .sw-hero-graph {
   position: absolute;
   inset: 0;

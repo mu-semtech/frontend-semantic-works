@@ -1,6 +1,6 @@
 @import 'variables';
 
-// ─── Buttons ──────────────────────────────────────────────────────────────────
+// -- Buttons
 .sw-btn {
   display: inline-flex;
   align-items: center;
@@ -59,7 +59,7 @@
   }
 }
 
-// ─── Cards ────────────────────────────────────────────────────────────────────
+// -- Cards
 .sw-card {
   background: $color-surface;
   border: 1px solid $color-border;
@@ -136,7 +136,7 @@
   }
 }
 
-// ─── Terminal block ────────────────────────────────────────────────────────────
+// -- Terminal block
 .sw-terminal {
   background: $color-sky-deeper;
   border-radius: $radius-lg;
@@ -178,7 +178,7 @@
   }
 }
 
-// ─── Stat pill ────────────────────────────────────────────────────────────────
+// -- Stat pill
 .sw-stat {
   text-align: center;
 
@@ -200,7 +200,7 @@
   }
 }
 
-// ─── Service list item ────────────────────────────────────────────────────────
+// -- Service list item
 .sw-service-item {
   display: flex;
   gap: $space-4;
@@ -236,7 +236,7 @@
   }
 }
 
-// ─── Divider ──────────────────────────────────────────────────────────────────
+// -- Divider
 .sw-divider {
   border: none;
   border-top: 1px solid $color-border;

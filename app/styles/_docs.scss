@@ -1,7 +1,7 @@
 @import 'variables';
 
-// ─── Rendered Markdown body (.md-body) ───────────────────────────────────────
-// marked.js renders into a <div class="md-body"> — no shadow DOM, full CSS
+// -- Rendered Markdown body (.md-body)
+// marked.js renders into a <div class="md-body">. No shadow DOM, full CSS
 // control. highlight.js handles code block syntax colouring.
 .md-body {
   font-family: $font-body;
@@ -9,7 +9,7 @@
   line-height: 1.75;
   color: $color-body;
 
-  // ── Headings ──────────────────────────────────────────────────────────────
+  // -- Headings
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
     color: $color-heading;
@@ -27,10 +27,10 @@
   h5 { font-size: 0.875rem; font-weight: 600; }
   h6 { font-size: 0.875rem; font-weight: 600; color: $color-muted; }
 
-  // ── Paragraphs & spacing ──────────────────────────────────────────────────
+  // -- Paragraphs & spacing
   p { margin: 0 0 1em; }
 
-  // ── Links ─────────────────────────────────────────────────────────────────
+  // -- Links
   a {
     color: $color-sky-dark;
     text-decoration: underline;
@@ -38,7 +38,7 @@
     &:hover { color: $color-sky; }
   }
 
-  // ── Lists ─────────────────────────────────────────────────────────────────
+  // -- Lists
   ul, ol {
     padding-left: 1.5em;
     margin: 0 0 1em;
@@ -46,7 +46,7 @@
   li { margin-bottom: 0.25em; }
   li > ul, li > ol { margin-top: 0.25em; margin-bottom: 0; }
 
-  // ── Blockquote ────────────────────────────────────────────────────────────
+  // -- Blockquote
   blockquote {
     margin: 0 0 1em;
     padding: 0.75em 1em;
@@ -58,7 +58,7 @@
     > p { margin: 0; }
   }
 
-  // ── Inline code ───────────────────────────────────────────────────────────
+  // -- Inline code
   code {
     font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
     font-size: 0.875em;
@@ -69,7 +69,7 @@
     border: 1px solid $color-border;
   }
 
-  // ── Code blocks (hljs renders pre > code.hljs) ────────────────────────────
+  // -- Code blocks (hljs renders pre > code.hljs)
   pre {
     margin: 0 0 1em;
     border-radius: $radius-sm;
@@ -91,14 +91,14 @@
     code.hljs { background: $color-sky-light; }
   }
 
-  // ── Horizontal rule ───────────────────────────────────────────────────────
+  // -- Horizontal rule
   hr {
     border: none;
     border-top: 1px solid $color-border;
     margin: 2em 0;
   }
 
-  // ── Tables ────────────────────────────────────────────────────────────────
+  // -- Tables
   table {
     width: 100%;
     border-collapse: collapse;
@@ -124,7 +124,7 @@
 
   tbody tr:hover td { background: #f7fcff; }
 
-  // ── Images ────────────────────────────────────────────────────────────────
+  // -- Images
   img {
     max-width: 100%;
     border-radius: $radius-sm;
@@ -137,7 +137,7 @@
   font-style: italic;
 }
 
-// ─── Shared Page Header (docs + tutorial) ────────────────────────────────────
+// -- Shared Page Header (docs + tutorial)
 .sw-page-header {
   background: linear-gradient(135deg, $color-sky-deeper 0%, $color-sky-dark 100%);
   padding: $space-12 0 $space-10;
@@ -187,7 +187,7 @@
   margin: 0;
 }
 
-// ─── Docs Layout ─────────────────────────────────────────────────────────────
+// -- Docs Layout
 .docs-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -207,7 +207,7 @@
   }
 }
 
-// ─── Docs Sidebar ─────────────────────────────────────────────────────────────
+// -- Docs Sidebar
 .docs-sidebar {
   padding: $space-8 0;
   border-right: 1px solid $color-border;
@@ -247,7 +247,7 @@
   margin: 0;
   line-height: 1.2;
 
-  // Top-level "Documentation" label — style it as a mini-eyebrow
+  // Top-level "Documentation" label, styled as a mini-eyebrow
   &.docs-nav-level-0 {
     color: $color-sky-dark;
     font-size: 0.8rem;
@@ -282,7 +282,7 @@
   }
 }
 
-// ─── Docs Content ─────────────────────────────────────────────────────────────
+// -- Docs Content
 .docs-content {
   padding: $space-8 0 $space-16 $space-6;
   min-width: 0; // prevent content from overflowing the grid
@@ -294,7 +294,7 @@
   .md-body { max-width: 720px; }
 }
 
-// ─── Tutorial Page ────────────────────────────────────────────────────────────
+// -- Tutorial Page
 .sw-tutorial-body {
   max-width: $container-max;
   margin: 0 auto;
@@ -306,7 +306,7 @@
   }
 }
 
-// ─── Doc/Tutorial back link ───────────────────────────────────────────────────
+// -- Doc/Tutorial back link
 .sw-page-back {
   display: inline-flex;
   align-items: center;
