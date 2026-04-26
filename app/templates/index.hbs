@@ -3,34 +3,7 @@
 
   {{! Background graph: ghost nodes and edges, linked-data glitter }}
   <div class="sw-hero-graph" aria-hidden="true">
-    <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" class="sw-hero-graph-svg" preserveAspectRatio="xMidYMid slice">
-      {{! Edges }}
-      <line x1="535" y1="38"  x2="495" y2="105" class="sw-bg-edge" />
-      <line x1="535" y1="38"  x2="415" y2="82"  class="sw-bg-edge" />
-      <line x1="415" y1="82"  x2="495" y2="105" class="sw-bg-edge" />
-      <line x1="495" y1="105" x2="565" y2="185" class="sw-bg-edge" />
-      <line x1="415" y1="82"  x2="315" y2="162" class="sw-bg-edge" />
-      <line x1="315" y1="162" x2="445" y2="235" class="sw-bg-edge" />
-      <line x1="445" y1="235" x2="565" y2="185" class="sw-bg-edge" />
-      <line x1="445" y1="235" x2="475" y2="315" class="sw-bg-edge" />
-      <line x1="565" y1="185" x2="555" y2="375" class="sw-bg-edge" />
-      <line x1="475" y1="315" x2="375" y2="425" class="sw-bg-edge" />
-      <line x1="475" y1="315" x2="295" y2="352" class="sw-bg-edge" />
-      <line x1="295" y1="352" x2="375" y2="425" class="sw-bg-edge" />
-      <line x1="555" y1="375" x2="475" y2="315" class="sw-bg-edge" />
-      {{! Purple (graph) nodes }}
-      <circle cx="535" cy="38"  r="5" class="sw-bg-node sw-bg-node--graph" id="bg-n1" />
-      <circle cx="565" cy="185" r="4" class="sw-bg-node sw-bg-node--graph" id="bg-n3" />
-      <circle cx="475" cy="315" r="5" class="sw-bg-node sw-bg-node--graph" id="bg-n4" />
-      <circle cx="375" cy="425" r="4" class="sw-bg-node sw-bg-node--graph" id="bg-n5" />
-      {{! Sky nodes }}
-      <circle cx="495" cy="105" r="4" class="sw-bg-node sw-bg-node--sky" id="bg-n6" />
-      <circle cx="415" cy="82"  r="3" class="sw-bg-node sw-bg-node--sky" id="bg-n2" />
-      <circle cx="315" cy="162" r="4" class="sw-bg-node sw-bg-node--sky" id="bg-n7" />
-      <circle cx="445" cy="235" r="5" class="sw-bg-node sw-bg-node--sky" id="bg-n8" />
-      <circle cx="295" cy="352" r="3" class="sw-bg-node sw-bg-node--sky" id="bg-n9" />
-      <circle cx="555" cy="375" r="4" class="sw-bg-node sw-bg-node--sky" id="bg-n10" />
-    </svg>
+    <HeroGraph />
   </div>
 
   <div class="sw-hero-inner">
@@ -51,58 +24,7 @@
 
     <div class="sw-hero-visual">
       <div class="sw-kite-wrap">
-        {{! Inline SVG: the mu-man kite. Nodes pulse to signal the graph coming alive. }}
-        <svg viewBox="10 55 195 180" xmlns="http://www.w3.org/2000/svg" class="sw-kite" role="img" aria-label="The mu-man: a kite whose nodes form a graph. Connect them and a face appears.">
-          <defs>
-            <clipPath id="kite-eye-left">
-              <path d="m 53.600263,122.03382 c 17.494821,-1.36833 35.06552,-1.72434 52.487067,-1.92025 -17.433387,3.80104 -34.737865,8.23678 -50.9286,15.47339 0.631007,-4.35803 0.254759,-9.04697 -1.558467,-13.55314 z" />
-            </clipPath>
-            <clipPath id="kite-eye-right">
-              <path d="m 117.49756,119.00037 c 17.584,-1.64244 34.6143,-2.02711 52.51838,-2.00722 -1.93136,4.24303 -1.21014,9.06632 -0.8662,13.80707 -16.06897,-4.68896 -32.29928,-9.08332 -50.04848,-10.70405 z" />
-            </clipPath>
-          </defs>
-
-          {{! Strings / edges connecting the graph nodes }}
-          <path class="sw-kite-edge" d="M 32.430439,94.693736 C 56.535655,91.901724 88.901045,82.705909 110.1857,73.013545" />
-          <path class="sw-kite-edge" d="m 121.99004,73.291327 c 18.72758,12.460574 36.30997,18.726415 56.73159,22.386342" />
-          <path class="sw-kite-edge" d="m 183.52323,103.68689 c -11.34529,30.56586 -18.87736,62.65275 -20.58388,97.40939" />
-          <path class="sw-kite-edge" d="M 91.702579,223.15606 C 111.65822,214.15224 132.95988,209.95563 154.98917,208.3577" />
-          <path class="sw-kite-edge" d="m 58.642421,208.27899 c 7.005007,3.45807 14.109283,7.80955 21.410388,13.93249" />
-          <path class="sw-kite-edge" d="m 28.943027,101.96852 c 12.048391,31.93058 20.08237,64.24965 22.931784,97.07046" />
-          <path class="sw-kite-edge" d="m 41.12841,214.14323 c 3.436703,-1.46293 5.645256,-3.27675 7.005605,-5.33292" />
-
-          {{! Kite wing shapes (the "eyes" / brow features of the face) }}
-          <path class="sw-kite-wing" d="m 53.600262,122.03382 c 17.494821,-1.36833 35.065522,-1.72434 52.487068,-1.92025 -17.433388,3.80104 -34.737866,8.23678 -50.928599,15.47339 0.631006,-4.35803 0.254759,-9.04697 -1.558469,-13.55314 z" />
-          <path class="sw-kite-wing" d="m 117.49756,119.00037 c 17.584,-1.64244 34.6143,-2.02711 52.51838,-2.00722 -1.93136,4.24303 -1.21014,9.06632 -0.8662,13.80707 -16.06897,-4.68896 -32.29928,-9.08332 -50.04848,-10.70405 z" />
-
-          {{! Eye highlights clipped to the wing shape }}
-          <circle class="sw-kite-eye" cx="77.923538" cy="125.06727" r="8.2535915" clip-path="url(#kite-eye-left)" />
-          <circle class="sw-kite-eye" cx="145.57787" cy="121.61637" r="8.2535915" clip-path="url(#kite-eye-right)" />
-
-          {{! Mouth / smile }}
-          <path class="sw-kite-mouth" d="m 79.875702,195.35011 c 20.465118,-9.81684 42.041288,-12.30065 63.169648,-17.7401 l 0.24485,-1.15142 c -21.99224,0.72524 -43.984082,1.45526 -65.903849,3.05019 l 0.26566,1.5251 c 1.956335,2.94463 2.117797,7.94896 1.829996,13.46883 z" />
-          <path class="sw-kite-edge" d="m 77.056699,180.4551 c 1.956335,2.94463 2.481599,9.12305 2.193798,14.64292 m 0.344085,0.61589 c 20.465118,-9.81684 43.018148,-12.68199 64.146508,-18.12144 m 0.50209,-1.13388 c -21.99224,0.72524 -45.251255,1.53794 -67.171022,3.13287" />
-
-          {{! Eye detail strokes }}
-          <path class="sw-kite-edge" d="m 53.210645,123.64796 0.417446,-2.53252" />
-          <path class="sw-kite-edge" d="m 103.66614,121.78336 4.09098,-3.53439" />
-          <path class="sw-kite-edge" d="m 54.296008,133.49972 1.641959,3.14477" />
-          <path class="sw-kite-edge" d="m 115.54947,117.60888 4.39712,3.28392" />
-          <path class="sw-kite-edge" d="m 169.98463,116.21739 0.61226,2.50469" />
-          <path class="sw-kite-edge" d="m 170.04029,128.3512 -1.33583,3.28392" />
-          <path class="sw-kite-edge" d="m 78.478787,178.43503 -1.594449,3.61675" />
-          <path class="sw-kite-edge" d="m 144.80973,175.00779 -4.1939,4.48138" />
-          <path class="sw-kite-edge" d="m 78.609782,193.48149 2.15652,2.67579" />
-
-          {{! Graph nodes: pulse to life, connecting to reveal the face }}
-          <circle class="sw-node sw-node-red" id="node-1" cx="26.460918" cy="95.923607" r="4.7483106" />
-          <circle class="sw-node sw-node-red" id="node-2" cx="116.25047"  cy="70.471619" r="4.7483106" />
-          <circle class="sw-node sw-node-red" id="node-3" cx="185.12976"  cy="97.612762" r="4.7483106" />
-          <circle class="sw-node sw-node-red" id="node-4" cx="161.42705"  cy="207.60002" r="4.7483106" />
-          <circle class="sw-node sw-node-red" id="node-5" cx="85.752747"  cy="224.99597" r="4.7483106" />
-          <circle class="sw-node sw-node-sky" id="node-6" cx="52.92461"   cy="205.32579" r="4.7483106" />
-          <circle class="sw-node sw-node-sky" id="node-7" cx="36.575768"  cy="217.74437" r="4.7483106" />
-        </svg>
+        <MuMan />
       </div>
 
       <div class="sw-hero-terminal">
@@ -126,16 +48,16 @@
   <div class="sw-proof-inner">
     <div class="sw-proof-stats">
       <div class="sw-stat">
-        <span class="sw-stat-number">12+</span>
+        <span class="sw-stat-number">10+</span>
         <span class="sw-stat-label">years in production</span>
       </div>
       <div class="sw-stat">
-        <span class="sw-stat-number">40+</span>
+        <span class="sw-stat-number">60+</span>
         <span class="sw-stat-label">applications shipped</span>
       </div>
       <div class="sw-stat">
-        <span class="sw-stat-number">6+</span>
-        <span class="sw-stat-label">companies contributing</span>
+        <span class="sw-stat-number">12+</span>
+        <span class="sw-stat-label">companies contributed</span>
       </div>
       <div class="sw-stat">
         <span class="sw-stat-number">100%</span>
@@ -373,6 +295,7 @@
       </div>
     </div>
     <p class="sw-services-more">
+      <!-- TODO: this should lead to a source repository containing all of the existing services we know of -->
       And <a href="https://github.com/mu-semtech" target="_blank" rel="noopener noreferrer">200+ community repositories</a>
       on GitHub: services, templates, and tooling built by the community.
     </p>
