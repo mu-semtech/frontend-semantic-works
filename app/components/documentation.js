@@ -5,6 +5,7 @@ import { htmlSafe } from '@ember/template';
 
 export default class DocumentationComponent extends Component {
   @tracked currentDoc = null;
+  @tracked currentUrl = null;
 
   constructor(owner, args) {
     super(owner, args);
@@ -13,6 +14,14 @@ export default class DocumentationComponent extends Component {
 
   @action
   async changeDoc(url) {
+    this.currentUrl = url;
+    // Scroll to content top instantly BEFORE clearing — footer stays invisible
+    const el = document.querySelector('.docs-content');
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 64;
+      window.scrollTo({ top, behavior: 'instant' });
+    }
+
     this.currentDoc = null;
     try {
       const resp = await fetch(url);
@@ -23,13 +32,5 @@ export default class DocumentationComponent extends Component {
       console.error('[docs] Failed to render markdown:', e);
       this.currentDoc = htmlSafe('<div class="md-body"><p class="md-load-error">Failed to load documentation.</p></div>');
     }
-
-    requestAnimationFrame(() => {
-      const el = document.querySelector('.docs-content');
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 64;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
   }
 }

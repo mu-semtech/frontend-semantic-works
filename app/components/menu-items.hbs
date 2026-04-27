@@ -2,13 +2,13 @@
   {{#if leaf.value}}
     {{#if leaf.link}}
       <button
-        class="docs-nav-link docs-nav-level-{{@level}}"
+        class="docs-nav-link docs-nav-level-{{@level}}{{if (eq leaf.value @activeUrl) " docs-nav-link--active"}}"
         type="button"
         {{on "click" (fn @clickHandler leaf.value)}}
       >{{leaf.name}}</button>
     {{else}}
       <div class="docs-nav-section docs-nav-level-{{@level}}">{{leaf.name}}</div>
     {{/if}}
-    <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}} @clickHandler={{@clickHandler}}/>
+    <MenuItems @docTree={{leaf.value}} @level={{this.nextLevel}} @clickHandler={{@clickHandler}} @activeUrl={{@activeUrl}}/>
   {{/if}}
 {{/each}}

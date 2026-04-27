@@ -280,6 +280,13 @@
     background: $color-sky-light;
     border-left-color: $color-sky;
   }
+
+  &--active {
+    color: $color-sky-dark;
+    font-weight: 500;
+    background: $color-sky-light;
+    border-left-color: $color-sky-dark;
+  }
 }
 
 // -- Docs Content

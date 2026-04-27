@@ -8,7 +8,7 @@
 
 <div class="docs-layout">
   <aside class="docs-sidebar">
-    <MenuItems @docTree={{@docTree}} @level={{0}} @clickHandler={{this.changeDoc}}/>
+    <MenuItems @docTree={{@docTree}} @level={{0}} @clickHandler={{this.changeDoc}} @activeUrl={{this.currentUrl}}/>
   </aside>
   <main class="docs-content">
     {{this.currentDoc}}
